@@ -1,0 +1,23 @@
+{
+  "users": [],
+  "closest": [
+    {
+      "id": 1,
+      "title": "Футболка USA",
+      "price": 229,
+      "image": "",
+      "category": "t-short",
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["green", "black"]
+    },
+    {
+      "id": 2,
+      "title": "Футболка USA",
+      "price": 229,
+      "image": "",
+      "category": "t-short",
+      "size": ["s", "m", "xl"],
+      "colors": ["green", "black", "white"]
+    }
+  ]
+}

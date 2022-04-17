@@ -1,0 +1,32 @@
+{
+  "header": {
+    "link1": "Main",
+    "link2": "Shop",
+    "link3": "About brand",
+    "link4": "Contact"
+  },
+
+  "home": {
+    "new": {
+      "title": "New Arrivals this season",
+      "text" : "Refined combinations and velvet shades <br/> - that's what you've been looking for this <br/> season. observation time.",
+      "btn": "Open shop"
+    },
+    "collection": {
+      "title": "New collection",
+      "text1": "USA T-shirt",
+      "text2": "Glow swimsuit",
+      "text3": "Sweatshirt Sweet Shot",
+      "btn": "Open shop"
+    },
+    "important": {
+      "title": "What is important to us",
+      "text1": "Quality",
+      "text2": "Speed",
+      "text3": "Responsibility",
+      "info1": "Our professionals work on the best equipment for tailoring clothes of unparalleled quality.",
+      "info2": "Thanks to the well-established system at Womazing, we can sew up to 20 pieces of products in our own workshops",
+      "info3": "We care about people and the planet. Waste-free production and comfortable working conditions - all this is Womazing"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.collection {
+  padding-bottom: 130px;
+  &__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: 92px;
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    &-card {
+      width: calc(33.33333% - 20px);
+      text-align: center;
+    }
+    &-text {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+      margin: 24px 0 7px;
+    }
+    &-prices {
+      display: flex;
+      column-gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+    &-through {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      text-decoration-line: line-through;
+      color: #9C9C9C;
+    }
+    &-price {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #998E78;
+    }
+  }
+  &__btn {
+    width: 243px;
+    height: 68px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 138.9%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #6E9C9F;
+    border: 1px solid #6E9C9F;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 65px auto 0;
+  }
+}

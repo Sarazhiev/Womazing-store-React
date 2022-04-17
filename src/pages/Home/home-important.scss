@@ -1,0 +1,34 @@
+.important {
+  padding-bottom: 130px;
+  &__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: 91px;
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 75px;
+    &-card {
+      width: calc(33.33333% - 50px);
+    }
+    &-info {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+      margin: 37px 0 24px;
+    }
+    &-text {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+    }
+  }
+}
