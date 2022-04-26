@@ -1,0 +1,22 @@
+.profile {
+  &__content {
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+  &__change {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

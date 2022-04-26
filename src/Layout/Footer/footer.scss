@@ -1,0 +1,64 @@
+.footer {
+  padding: 104px 0 97px;
+  background: #F1EADC;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 9px;
+    &-tel {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    &-right {
+      display: flex;
+      column-gap: 250px;
+    }
+    &-defense {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 200%;
+      letter-spacing: 0.02em;
+      color: #000000;
+      margin-top: 20px;
+    }
+    &-item {
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      color: #000000;
+      line-height: 220%;
+      &:hover, &_active {
+        color: #6E9C9F;
+        transition: .3s;
+      }
+    }
+    &-left {
+      display: flex;
+      flex-direction: column;
+    }
+    &-icons {
+      display: flex;
+      column-gap: 12px;
+    }
+    &-icon {
+      font-size: 23px;
+    }
+    &-pay {
+      font-size: 40px;
+      margin: 25px auto 0;
+    }
+  }
+}

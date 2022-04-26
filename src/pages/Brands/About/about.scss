@@ -1,0 +1,24 @@
+.about {
+  padding: 190px 0;
+  &__title {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+  }
+  &__links {
+    display: flex;
+    column-gap: 13px;
+    margin-top: 26px;
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000;
+    &.active {
+      color: #6E9C9F;
+    }
+  }
+}

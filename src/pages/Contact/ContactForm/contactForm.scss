@@ -1,0 +1,70 @@
+.contactForm {
+  padding-bottom: 130px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 443px;
+  row-gap: 35px;
+  &__title {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    margin-bottom: 62px;
+  }
+  &__input {
+    width: 69%;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    padding-bottom: 16px;
+    &::placeholder {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #868686;
+    }
+  }
+  &__message {
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    resize: none;
+    padding-bottom: 110px;
+
+    &::placeholder {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #868686;
+    }
+  }
+  &__btn {
+    background: #6E9C9F;
+    width: 189px;
+    height: 68px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 138.9%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+  }
+  &__btn2 {
+    padding: 10px 10px;
+    height: 68px;
+    cursor: pointer;
+    border: none;
+    background: #F1EADC;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+  }
+}

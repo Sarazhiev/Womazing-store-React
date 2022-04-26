@@ -13,8 +13,30 @@
   margin: 0 auto;
 }
 
+.title {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin-bottom: 26px;
+}
+.home {
+  color: mediumpurple;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
 
 @import "./Layout/Header/header";
-@import "./pages/Home/home-new";
-@import "./pages/Home/home-collection";
-@import "./pages/Home/home-important";
+@import "pages/Home/New/home-new";
+@import "pages/Home/Collection/home-collection";
+@import "pages/Home/Important/home-important";
+@import "pages/Home/Team/home-team";
+@import "Layout/Footer/footer";
+@import "./pages/Login/login";
+@import "./pages/Register/register";
+@import "./pages/Shop/shop";
+@import "./pages/Basket/basket";
+@import "./pages/Product/product";
+@import "./pages/Order/order";

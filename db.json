@@ -1,23 +1,370 @@
 {
-  "users": [],
-  "closest": [
+  "users": [
+    {
+      "email": "Nurik@mail.ru",
+      "password": "$2a$10$4w.Gs.OIfE9S6Pi1k4Ovku49trIvQwiKkZAqOiOoV4phOMpAxJwrO",
+      "login": "Nursultan",
+      "phone": "500326320",
+      "orders": [],
+      "id": 1
+    },
+    {
+      "email": "nurik@mail.ru",
+      "password": "$2a$10$BYCLuKIZ8nlIYS.Ie4GSAuv1j.bHlqO6UWtqTbMzltbJp2Da/i0Vy",
+      "login": "Nursultan",
+      "phone": "+996(500)00-00-00",
+      "orders": [],
+      "id": 2
+    }
+  ],
+  "clothes": [
     {
       "id": 1,
-      "title": "Футболка USA",
-      "price": 229,
-      "image": "",
-      "category": "t-short",
-      "size": ["s", "m", "l", "xl"],
-      "colors": ["green", "black"]
+      "title": "Hoody Chess",
+      "price": 390,
+      "priceSale": 200,
+      "image": "Shop/hoody1.jpg",
+      "category": "hoody",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "colors": [
+        "green",
+        "black"
+      ]
     },
     {
       "id": 2,
-      "title": "Футболка USA",
+      "title": "Hoody Harley Queen",
+      "price": 400,
+      "priceSale": 300,
+      "image": "Shop/hoody2.jpg",
+      "category": "hoody",
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
+      "colors": [
+        "green",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Hoody Anime",
+      "price": 519,
+      "priceSale": 400,
+      "image": "Shop/hoody3.jpg",
+      "category": "hoody",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "colors": [
+        "green",
+        "black"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Hoody Wendy",
+      "price": 429,
+      "image": "Shop/hoody4.jpg",
+      "category": "hoody",
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
+      "colors": [
+        "green",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Hoody Rick and Morty",
+      "price": 339,
+      "image": "Shop/hoody5.jpg",
+      "category": "hoody",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "colors": [
+        "green",
+        "black"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Sport Suit STAMINA 4YV36",
+      "price": 279,
+      "image": "Shop/sportsuit1.jpg",
+      "category": "sportsuit",
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
+      "colors": [
+        "gray",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Sport Suit 4YV44 STAMINA",
+      "price": 279,
+      "image": "Shop/sportsuit2.jpg",
+      "category": "sportsuit",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "colors": [
+        "gray",
+        "black"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Sport Suit Milk",
       "price": 229,
-      "image": "",
-      "category": "t-short",
-      "size": ["s", "m", "xl"],
-      "colors": ["green", "black", "white"]
+      "image": "Shop/sportsuit3.jpg",
+      "category": "sportsuit",
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
+      "colors": [
+        "violet",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Sport Suit WarmHeart",
+      "price": 259,
+      "image": "Shop/sportsuit4.jpg",
+      "category": "sportsuit",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "colors": [
+        "white",
+        "black"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Sport Suit Free Flow",
+      "price": 290,
+      "priceSale": 150,
+      "image": "Shop/sportsuit5.jpg",
+      "category": "sportsuit",
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
+      "colors": [
+        "gray",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Sweatshirt Jinx LOL",
+      "price": 300,
+      "image": "Shop/sweatshirt5.jpg",
+      "category": "sweatshirt",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "colors": [
+        "gray",
+        "violet",
+        "black"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Sweatshirt Dragon",
+      "price": 200,
+      "image": "Shop/sweatshirt4.jpg",
+      "category": "sweatshirt",
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
+      "colors": [
+        "gray",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Sweatshirt Rabbit",
+      "price": 230,
+      "image": "Shop/sweatshirt3.jpg",
+      "category": "sweatshirt",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "colors": [
+        "green",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Sweatshirt Cat",
+      "price": 250,
+      "image": "Shop/sweatshirt2.jpg",
+      "category": "sweatshirt",
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
+      "colors": [
+        "pink",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Sweatshirt Euphoria",
+      "price": 200,
+      "image": "Shop/sweatshirt1.jpg",
+      "category": "sweatshirt",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "colors": [
+        "white",
+        "gray",
+        "black"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Футболка Монализа",
+      "price": 540,
+      "image": "Shop/tshort1.jpg",
+      "category": "tshort",
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
+      "colors": [
+        "pink",
+        "violet",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Футболка девочка",
+      "price": 520,
+      "image": "Shop/tshort2.jpg",
+      "category": "tshort",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "colors": [
+        "brown",
+        "black"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Футболка Japan",
+      "price": 350,
+      "image": "Shop/tshort3.jpg",
+      "category": "tshort",
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
+      "colors": [
+        "black",
+        "white"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Футболка Бегемотик",
+      "price": 490,
+      "image": "Shop/tshort4.jpg",
+      "category": "tshort",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "colors": [
+        "white",
+        "brown",
+        "black"
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Футболка Киллуа",
+      "price": 500,
+      "image": "Shop/tshort5.jpg",
+      "category": "tshort",
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
+      "colors": [
+        "gray",
+        "black",
+        "white"
+      ]
     }
   ]
 }

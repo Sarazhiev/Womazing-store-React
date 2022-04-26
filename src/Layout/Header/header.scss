@@ -1,5 +1,6 @@
 .header {
   padding-top: 51px;
+
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -63,5 +64,25 @@
   }
   &__phone {
     color: #6E9C9F;
+  }
+  &__user {
+    color: #000;
+    &.active {
+      color: #6E9C9F;
+    }
+  }
+  &__out {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+  }
+  &__login {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
   }
 }

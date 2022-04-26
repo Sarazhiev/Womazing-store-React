@@ -1,0 +1,41 @@
+.team {
+  padding-bottom: 130px;
+  &__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: 92px;
+  }
+  &__content {
+    display: flex;
+    column-gap: 124px;
+    &-right {
+      width: calc(50% - 62px);
+    }
+    &-text {
+      padding-top: 78px;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+    }
+    &-info {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+      margin: 28px 0;
+    }
+    &-more {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #6E9C9F;
+    }
+  }
+}

@@ -1,10 +1,17 @@
 import React from 'react';
+import ContactHeader from "./Crumbs/Crumbs";
+import Map from "./Map/Map";
+import Contacts from "./Contacts/Contacts";
+import ContactFrom from "./ContactForm/ContactFrom";
 
 const Contact = () => {
     return (
-        <div>
-            contact
-        </div>
+        <main>
+            <ContactHeader/>
+            <Map/>
+            <Contacts/>
+            <ContactFrom/>
+        </main>
     );
 };
 

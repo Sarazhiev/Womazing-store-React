@@ -6,29 +6,41 @@ import Shop from "../pages/Shop/Shop";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Brands from "../pages/Brands/Brands";
-import Cart from "../pages/Cart/Cart";
+import Basket from "../pages/Basket/Basket";
 import NotFound from "../pages/NotFound/NotFound";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
+import Profile from "../pages/Profile/Profile";
+import Product from "../pages/Product/Product";
+import Order from "../pages/Order/Order";
 
 const Layout = () => {
     const location = useLocation();
     return (
         <div>
-            <Header/>
+
+            {
+                location.pathname !== '/login' && location.pathname !== '/register' ? <Header/> : ''
+            }
+
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/contact' element={<Contact/>}/>
                 <Route path='/shop' element={<Shop/>}/>
                 <Route path='/brands' element={<Brands/>}/>
-                <Route path='/cart' element={<Cart/>}/>
+                <Route path='/login' element={<Login/>}/>
+                <Route path='/register' element={<Register/>}/>
+                <Route path='/basket' element={<Basket/>}/>
                 <Route path='/*' element={<NotFound/>}/>
+                <Route path='/product/:id' element={<Product/>}/>
+                <Route path='/profile' element={<Profile/>}/>
+                <Route path='/order' element={<Order/>}/>
             </Routes>
             {
-                   location.pathname === "/"
-                || location.pathname === "/contact"
-                || location.pathname === "/shop"
-                || location.pathname === "/brands"
-                || location.pathname === "/cart"
-                ? <Footer/> : ''
+                   location.pathname === "/login"
+                || location.pathname === "/register"
+
+                ? '' : <Footer/>
             }
         </div>
     );

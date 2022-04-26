@@ -1,5 +1,5 @@
 import React from 'react';
-import img from "../../Assets/Home/home-new.png";
+import img from "../../../Assets/Home/home-new.png";
 
 const CollectionCard = ({img, title, priceThrough}) => {
     return (

@@ -1,0 +1,23 @@
+.idea {
+  &__content {
+    display: flex;
+    column-gap: 94px;
+    align-items: center;
+  }
+  &__inner {
+    width: calc(50% - 47px);
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    margin-bottom: 46px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+  }
+}

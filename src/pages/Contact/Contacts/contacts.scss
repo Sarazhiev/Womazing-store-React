@@ -1,0 +1,25 @@
+.contacts {
+  padding: 130px 0;
+  &__content {
+    display: flex;
+    column-gap: 111px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 19px;
+    &-title {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+    }
+    &-link {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+    }
+  }
+}

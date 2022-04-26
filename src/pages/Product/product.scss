@@ -1,0 +1,133 @@
+.product {
+  padding-top: 114px;
+  &__unlink {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #919191;
+  }
+  &__card {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  &__content {
+    display: flex;
+    column-gap: 74px;
+
+    &-img {
+      width: 50%;
+      max-width: 536px;
+    }
+
+    &-price {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 110%;
+      letter-spacing: 0.02em;
+      color: #998E78;
+      &-sale {
+        font-size: 30px;
+        color: #9C9C9C;
+      }
+      &-line {
+        margin: 0 10px;
+        color: black;
+      }
+    }
+    &-choose {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+    }
+    &-sizes {
+      display: flex;
+      column-gap: 15px;
+    }
+    &-size {
+      border: 1px solid #000000;
+      width: 41px;
+      height: 41px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+      text-transform: uppercase;
+      transition: .3s;
+      cursor: pointer;
+      margin-bottom: 67px;
+      &:hover , &_active {
+        color: #fff;
+        background: black;
+        transition: .3s;
+      }
+    }
+    &-color {
+      width: 41px;
+      height: 41px;
+      border-radius: 50%;
+      &_active {
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          width: 41px;
+          height: 2px;
+          background: black;
+        }
+      }
+    }
+    &-form {
+      display: flex;
+      column-gap: 7px;
+      margin-top: 50px;
+    }
+    &-input {
+      width: 68px;
+      height: 68px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    &-btn {
+      background: #6E9C9F;
+      padding: 0 50px;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 138.9%;
+      text-align: center;
+      letter-spacing: 0.02em;
+      border: none;
+      cursor: pointer;
+      color: #FFFFFF;
+    }
+  }
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &__similar {
+    margin: 130px 0 60px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: #000000;
+  }
+  &__row {
+    display: flex;
+    column-gap: 30px;
+    margin-bottom: 40px;
+  }
+}
