@@ -77,21 +77,52 @@
     "link1": "Main",
     "link2": "Basket",
     "product": "Product",
+    "size": "Size",
+    "color": "Color",
     "price": "Price",
     "quantity": "quantity",
     "Total": "total",
     "ticket": "Enter coupon",
     "useTicket": "Apply Coupon",
-    "updateCart": "Update Basket",
-    "subtotal": "Subtotal:",
+    "updateCart": "Empty the basket",
+    "subtotal": "Subtotal",
     "sum": "total",
-    "checkout": "Checkout"
+    "checkout": "Checkout",
+    "basketText": "Your shopping cart is empty !!!"
+
   },
   "order": {
     "title": "Order Received",
     "link1": "Main",
     "link2": "Checkout",
-    "link3": "Order Received"
+    "link3": "Order Received",
+    "success": "Order successfully completed",
+    "contact": "We will contact you shortly!",
+    "btn": "Go to Main page"
+  },
+  "checkout": {
+    "title": "Ordering",
+    "link1": "Home",
+    "link2": "Ordering",
+    "buyerTitle": "Buyer data",
+    "buyerName": "Name",
+    "buyerMail": "E-mail",
+    "buyerPhone": "Phone",
+    "orderTitle": "Your order",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "productName": "Product",
+    "inTotal": "In Total",
+    "addressTitle": "Address of the recipient",
+    "country": "Country",
+    "city": "City",
+    "street": "Street",
+    "home": "Home",
+    "flat": "flat",
+    "comments": "Comments",
+    "payment": "Payment Methods",
+    "cash": "Cash payment",
+    "place": "Place an order"
   },
   "shop": {
     "sortTitle": "Sort by:",
@@ -105,7 +136,8 @@
     "suit": "Sport-Suits",
     "sweatshirt": "Sweatshirts",
     "tshort": "T-Shorts",
-    "hoody": "hoodies"
+    "hoody": "hoodies",
+    "discountText": "There are no discounts for this category!"
   },
   "footer": {
     "defense": "© All rights reserved <br/> Privacy Policy <br/> Public offer <br/>",

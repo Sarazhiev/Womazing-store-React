@@ -13,8 +13,49 @@
       "password": "$2a$10$BYCLuKIZ8nlIYS.Ie4GSAuv1j.bHlqO6UWtqTbMzltbJp2Da/i0Vy",
       "login": "Nursultan",
       "phone": "+996(500)00-00-00",
-      "orders": [],
+      "orders": [
+        {
+          "clothes": [
+            {
+              "id": 2,
+              "title": "Hoody Harley Queen",
+              "image": "Shop/hoody2.jpg",
+              "color": "green",
+              "size": "s",
+              "count": 2,
+              "price": 300,
+              "category": "hoody"
+            }
+          ],
+          "price": 570,
+          "date": "2022-04-30T11:18:01.578Z"
+        },
+        {
+          "clothes": [
+            {
+              "id": 2,
+              "title": "Hoody Harley Queen",
+              "image": "Shop/hoody2.jpg",
+              "color": "green",
+              "size": "s",
+              "count": 1,
+              "price": 300,
+              "category": "hoody"
+            }
+          ],
+          "price": 285,
+          "date": "2022-04-30T11:18:57.567Z"
+        }
+      ],
       "id": 2
+    },
+    {
+      "email": "Sabine@mail.ru",
+      "password": "$2a$10$InX0S7UoBPoU.VFJNeqTm.SA6BLf5Bw0B/6TBwKfDkwSrGPeRZlj2",
+      "login": "SabineJon",
+      "phone": "+996(111)11-11-11",
+      "orders": [],
+      "id": 3
     }
   ],
   "clothes": [
@@ -34,7 +75,8 @@
       "colors": [
         "green",
         "black"
-      ]
+      ],
+      "inStock": 0
     },
     {
       "id": 2,
@@ -52,7 +94,8 @@
         "green",
         "black",
         "white"
-      ]
+      ],
+      "inStock": 21
     },
     {
       "id": 3,
@@ -70,7 +113,8 @@
       "colors": [
         "green",
         "black"
-      ]
+      ],
+      "inStock": 23
     },
     {
       "id": 4,
@@ -87,7 +131,8 @@
         "green",
         "black",
         "white"
-      ]
+      ],
+      "inStock": 25
     },
     {
       "id": 5,
@@ -104,11 +149,12 @@
       "colors": [
         "green",
         "black"
-      ]
+      ],
+      "inStock": 10
     },
     {
       "id": 6,
-      "title": "Sport Suit STAMINA 4YV36",
+      "title": "Sport Suit STAMINA1",
       "price": 279,
       "image": "Shop/sportsuit1.jpg",
       "category": "sportsuit",
@@ -121,11 +167,12 @@
         "gray",
         "black",
         "white"
-      ]
+      ],
+      "inStock": 33
     },
     {
       "id": 7,
-      "title": "Sport Suit 4YV44 STAMINA",
+      "title": "Sport Suit STAMINA2",
       "price": 279,
       "image": "Shop/sportsuit2.jpg",
       "category": "sportsuit",
@@ -138,7 +185,8 @@
       "colors": [
         "gray",
         "black"
-      ]
+      ],
+      "inStock": 12
     },
     {
       "id": 8,
@@ -155,7 +203,8 @@
         "violet",
         "black",
         "white"
-      ]
+      ],
+      "inStock": 9
     },
     {
       "id": 9,
@@ -172,11 +221,12 @@
       "colors": [
         "white",
         "black"
-      ]
+      ],
+      "inStock": 31
     },
     {
       "id": 10,
-      "title": "Sport Suit Free Flow",
+      "title": "Sport Suit Flow",
       "price": 290,
       "priceSale": 150,
       "image": "Shop/sportsuit5.jpg",
@@ -190,7 +240,8 @@
         "gray",
         "black",
         "white"
-      ]
+      ],
+      "inStock": 6
     },
     {
       "id": 11,
@@ -208,7 +259,8 @@
         "gray",
         "violet",
         "black"
-      ]
+      ],
+      "inStock": 45
     },
     {
       "id": 12,
@@ -225,7 +277,8 @@
         "gray",
         "black",
         "white"
-      ]
+      ],
+      "inStock": 52
     },
     {
       "id": 13,
@@ -243,7 +296,8 @@
         "green",
         "red",
         "black"
-      ]
+      ],
+      "inStock": 44
     },
     {
       "id": 14,
@@ -260,7 +314,8 @@
         "pink",
         "black",
         "white"
-      ]
+      ],
+      "inStock": 15
     },
     {
       "id": 15,
@@ -278,7 +333,8 @@
         "white",
         "gray",
         "black"
-      ]
+      ],
+      "inStock": 16
     },
     {
       "id": 16,
@@ -296,7 +352,8 @@
         "violet",
         "black",
         "white"
-      ]
+      ],
+      "inStock": 27
     },
     {
       "id": 17,
@@ -313,7 +370,8 @@
       "colors": [
         "brown",
         "black"
-      ]
+      ],
+      "inStock": 31
     },
     {
       "id": 18,
@@ -329,7 +387,8 @@
       "colors": [
         "black",
         "white"
-      ]
+      ],
+      "inStock": 20
     },
     {
       "id": 19,
@@ -347,7 +406,8 @@
         "white",
         "brown",
         "black"
-      ]
+      ],
+      "inStock": 19
     },
     {
       "id": 20,
@@ -364,7 +424,111 @@
         "gray",
         "black",
         "white"
-      ]
+      ],
+      "inStock": 14
+    }
+  ],
+  "tickets": [
+    {
+      "id": 1,
+      "title": "itrun",
+      "discount": 5,
+      "count": 10
+    },
+    {
+      "id": 2,
+      "title": "sabine",
+      "discount": 15,
+      "count": 5
+    },
+    {
+      "id": 3,
+      "title": "rusik",
+      "discount": 25,
+      "count": 100
+    }
+  ],
+  "orders": [
+    {
+      "name": "mona",
+      "email": "mona@mail.ru",
+      "phone": "123325",
+      "county": "",
+      "city": "",
+      "street ": "",
+      "house": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 16,
+          "title": "Футболка Монализа",
+          "image": "Shop/tshort1.jpg",
+          "color": "pink",
+          "size": "s",
+          "count": "3",
+          "price": 540,
+          "category": "tshort"
+        }
+      ],
+      "price": 1539,
+      "userEmail": "nurik@mail.ru",
+      "date": "2022-04-30T11:08:39.879Z",
+      "id": 1
+    },
+    {
+      "name": "tesk1",
+      "email": "test@mail.ru",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street ": "",
+      "house": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "Hoody Harley Queen",
+          "image": "Shop/hoody2.jpg",
+          "color": "green",
+          "size": "s",
+          "count": 2,
+          "price": 300,
+          "category": "hoody"
+        }
+      ],
+      "price": 570,
+      "userEmail": "nurik@mail.ru",
+      "date": "2022-04-30T11:18:01.550Z",
+      "id": 2
+    },
+    {
+      "name": "test2",
+      "email": "test2@mail.ru",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street ": "",
+      "house": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "Hoody Harley Queen",
+          "image": "Shop/hoody2.jpg",
+          "color": "green",
+          "size": "s",
+          "count": 1,
+          "price": 300,
+          "category": "hoody"
+        }
+      ],
+      "price": 285,
+      "userEmail": "nurik@mail.ru",
+      "date": "2022-04-30T11:18:57.536Z",
+      "id": 3
     }
   ]
 }

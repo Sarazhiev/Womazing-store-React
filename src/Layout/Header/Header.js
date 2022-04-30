@@ -9,7 +9,7 @@ import {FaUser} from 'react-icons/fa'
 const Header = () => {
     const {t, i18n} = useTranslation();
 
-    const {user, logOutUser} = useContext(CustomContext);
+    const {user, logOutUser, cart} = useContext(CustomContext);
 
     const changeLanguage = (lang) => {
         i18n.changeLanguage(lang)
@@ -33,7 +33,8 @@ const Header = () => {
                     <div className='header__info'>
                         <p className='header__phone'><a className='header__phone' href="tel: +7 (495) 823-54-12"><FiPhoneCall/></a> </p>
                         <p><a className='header__tel' href="tel: +7 (495) 823-54-12">+7 (495) 823-54-12</a></p>
-                        <NavLink className="header__link" to="/basket"><BsHandbag/></NavLink>
+                        <NavLink className="header__link header__link_basket" to="/basket"><BsHandbag/><span style={{background: cart.length ? '#998E78' : ''}} className='header__link_cart'>{cart.length  || ''}</span>
+                        </NavLink>
                         <div className='header__btns'>
                             <button style={{background: i18n.language === 'ru' ? 'lightblue' : ''}} className='header__btn ' onClick={() => changeLanguage('ru')} type='button'>Ru</button>
                             <button style={{background: i18n.language === 'en' ? 'lightblue' : ''}} className='header__btn' onClick={() => changeLanguage('en')} type='button'>Eng</button>

@@ -17,6 +17,7 @@ const Important = () => {
                     <ImportantCard img={icon3} title={t("home.important.text3")} text={t("home.important.info3")}/>
                 </div>
             </div>
+
         </section>
     );
 };

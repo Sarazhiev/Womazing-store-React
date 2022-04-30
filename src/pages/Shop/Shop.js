@@ -18,7 +18,7 @@ const Shop = () => {
     const showCount = shop.filter(item => status === 'all' ? item : item.category === status).filter(el => sort === 'discount' ? el.priceSale : el).filter((item, idx) => {
             return idx + 1 <= page * 9 && idx >= page * 9 - 9
         }).length,
-        showCountsLegth = shop.filter(item => status === 'all' ? item : item.category === status).filter(el => sort === 'discount' ? el.priceSale : el).length;
+        showCountsLength = shop.filter(item => status === 'all' ? item : item.category === status).filter(el => sort === 'discount' ? el.priceSale : el).length;
 
 
     return (
@@ -64,49 +64,62 @@ const Shop = () => {
                         : ''
                     }
                     <div className='shop__sorts'>
-                        <button  type='btn' className={`shop__sort ${sort === 'big' ? 'active' : ''}`}
+                        <button type='btn' className={`shop__sort ${sort === 'big' ? 'active' : ''}`}
                                 onClick={() => setSort('big' !== sort ? 'big' : '')}>{t("shop.big")}</button>
-                        <button  type='btn' className={`shop__sort ${sort === 'less' ? 'active' : ''}`}
+                        <button type='btn' className={`shop__sort ${sort === 'less' ? 'active' : ''}`}
                                 onClick={() => setSort('less' !== sort ? 'less' : '')}>{t("shop.less")}</button>
                         <button type='btn' className={`shop__sort ${sort === 'discount' ? 'active' : ''}`}
                                 onClick={() => setSort('discount' !== sort ? 'discount' : '')}>{t("shop.discount")}</button>
                     </div>
                 </div>
 
-                <p>Показано: {showCount} из {showCountsLegth} товаров</p>
-
-                <div className='shop__row'>
-                    {
-                        shop.sort((a, b) => {
-                            if (sort === 'big') {
-                                return (b.priceSale || b.price) - (a.priceSale || a.price)
-                            } else if (sort === 'less') {
-                                return (a.priceSale || a.price) - (b.priceSale || b.price)
-                            }
-                        }).filter(el => sort === 'discount' ? el.priceSale : el)
-                            .filter(item => status === 'all' ? item : item.category === status).filter((item, idx) => {
-                            return idx + 1 <= page * 9 && idx >= page * 9 - 9
-                        }).map((item) => (
-
-                            <div key={item.id} className='shop__card'>
-                                <Link className="shop__card-link" to={`/product/${item.id}`}>
-                                    <img className='shop__card-img' src={`../${item.image}`} alt=""/>
-                                </Link>
-                                <h3 className='shop__card-title'>{item.title}</h3>
-                                <p className='shop__card-price'>${item.priceSale
-                                    ? <>
-                                        <span style={{textDecoration: 'line-through'}}>{item.price}</span>
-                                        -
-                                        <span className='shop__card-price-sale'>${item.priceSale}</span>
-                                    </>
-                                    : item.price}</p>
-                            </div>
-                        ))
-                    }
-                </div>
-                <p>Показано: {showCount} из {showCountsLegth} товаров</p>
                 {
-                    showCountsLegth > 9 ?
+                    showCountsLength <= 0
+                        ? <p className='shop__discount-text'>{t("shop.discountText")}</p>
+                        : <>
+                            <p>Показано: {showCount} из {showCountsLength} товаров</p>
+                            <div className='shop__row'>
+                                {
+                                    shop.sort((a, b) => {
+                                        if (sort === 'big') {
+                                            return (b.priceSale || b.price) - (a.priceSale || a.price)
+                                        } else if (sort === 'less') {
+                                            return (a.priceSale || a.price) - (b.priceSale || b.price)
+                                        }
+                                    }).filter(el => sort === 'discount' ? el.priceSale : el)
+                                        .filter(item => status === 'all' ? item : item.category === status).filter((item, idx) => {
+                                        return idx + 1 <= page * 9 && idx >= page * 9 - 9
+                                    }).map((item) => (
+
+                                        <div key={item.id} className='shop__card'>
+                                            <Link className="shop__card-link" to={`/product/${item.id}`}>
+                                                <img className='shop__card-img' src={`../${item.image}`} alt=""/>
+                                            </Link>
+                                            <h3 className='shop__card-title'>{item.title}</h3>
+                                            <p className='shop__card-price'>${item.priceSale
+                                                ? <>
+                                                    <span style={{textDecoration: 'line-through'}}>{item.price}</span>
+                                                    -
+                                                    <span className='shop__card-price-sale'>${item.priceSale}</span>
+                                                </>
+                                                : item.price}</p>
+                                            {
+                                                item.inStock ?
+                                                    <p className='shop__card-instock'>
+                                                        В наличии : <span>{item.inStock}</span>
+                                                    </p> :
+                                                    <p className='shop__card-instock'>
+                                                        Нет в наличии !
+                                                    </p>
+                                            }
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                            <p>Показано: {showCount} из {showCountsLength} товаров</p></>
+                }
+                {
+                    showCountsLength > 9 ?
                         <Pagination simple onChange={setPage} current={page}
                                     total={shop.filter(item => status === 'all' ? item : item.category === status).length}
                                     pageSize={9}/> : ''

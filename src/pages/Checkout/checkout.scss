@@ -1,0 +1,158 @@
+.checkout {
+  padding: 194px 0 130px;
+  &__title {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    margin-bottom: 47px;
+    &_com{
+      margin-top: 70px;
+    }
+  }
+  &__buyer {
+    display: flex;
+    column-gap: 180px;
+    margin: 180px 0 63px;
+    &-price {
+      width: 100px;
+    }
+    &-cart {
+      background: #6E9C9F;
+      color: white;
+      display: flex;
+      column-gap: 10px;
+      &-img {
+        width: 40%;
+      }
+      &-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      &-top {
+        padding-right: 10px;
+      }
+    }
+    &-form {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 35px;
+    }
+    &-input {
+      border: none;
+      border-bottom: 1px  solid black;
+      padding-bottom: 16px;
+      outline: none;
+      &::placeholder {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #868686;
+      }
+    }
+    &-left {
+      width: 50%;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &_act {
+        height: 57px;
+        padding: 8px;
+        background: #F1EADC;
+      }
+    }
+    &-info {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      width: 100%;
+    }
+    &-product {
+      text-align: left;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+    }
+    &-product-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+    &-product-text {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__address {
+    display: flex;
+    column-gap: 295px;
+    &-form {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 35px;
+    }
+    &-input {
+      border: none;
+      border-bottom: 1px  solid black;
+      padding-bottom: 16px;
+      outline: none;
+      &::placeholder {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #868686;
+      }
+    }
+    &-comment {
+      resize: none;
+      padding-bottom: 50px;
+      border: none;
+      border-bottom: 1px  solid black;
+      outline: none;
+      &::placeholder {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #868686;
+      }
+    }
+    &-check {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      margin-bottom: 47px;
+    }
+    &-left {
+      padding-top: 85px;
+    }
+    &-btn {
+      background: #6E9C9F;
+      padding: 22px 50px;
+      border: none;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 138.9%;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+    }
+  }
+}

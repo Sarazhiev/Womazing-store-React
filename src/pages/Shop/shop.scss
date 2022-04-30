@@ -5,6 +5,11 @@
     column-gap: 15px;
     align-items: center;
   }
+  &__discount-text {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 25px;
+  }
   &__item {
     padding: 19px 65px;
     border: 1px solid #000000;
@@ -71,6 +76,7 @@
     column-gap: 20px;
   }
   &__sort {
+    cursor: pointer;
     border: 1px solid #6E9C9F;
     background: transparent;
     color: #6E9C9F;

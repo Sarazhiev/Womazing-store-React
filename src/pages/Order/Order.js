@@ -20,13 +20,13 @@ const Order = () => {
                     <div className='order__content-left'>
                         <img className='order__content-img' src={img} alt="img"/>
                         <div className='order__content-subtitle'>
-                            <p className='order__content-text'>Заказ успешно оформлен</p>
-                            <p className='order__content-info'>Мы свяжемся с вами в ближайшее время!</p>
+                            <p className='order__content-text'>{t("order.success")}</p>
+                            <p className='order__content-info'>{t("order.contact")}</p>
                         </div>
                     </div>
                     <div className='order__content-right'>
                         <Link className='order__content-home' to='/'>
-                            <button className='order__content-btn'>Перейти на главную</button>
+                            <button className='order__content-btn'>{t("order.btn")}</button>
                         </Link>
                     </div>
                 </div>

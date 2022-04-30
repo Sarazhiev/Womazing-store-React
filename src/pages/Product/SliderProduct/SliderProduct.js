@@ -31,7 +31,7 @@ const SliderProduct = () => {
                     shop.filter(item => {
                         return item.category === product.category && item.id !== product.id
                     }).map(item => (
-                        <SwiperSlide>
+                        <SwiperSlide key={item.id}>
 
                             <div key={item.id} className='product__card'>
                                 <Link className="shop__card-link" to={`/product/${item.id}`}>

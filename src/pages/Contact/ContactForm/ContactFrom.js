@@ -18,7 +18,6 @@ const ContactFrom = () => {
                     <InputMask mask={`+\\9\\96(999)99-99-99`}  type='tel'  id='tel'  className="form__input" placeholder='Ввеите номер телефона'/>
                     <textarea className="form__message" placeholder={t("contacts.form.message")}/>
                     <button  className="form__btn" type="submit" dangerouslySetInnerHTML={{__html: t("contacts.form.btn")}}/>
-                    <button className="form__btn2" type="submit" dangerouslySetInnerHTML={{__html: t("contacts.form.success")}}/>
                 </form>
             </div>
         </section>

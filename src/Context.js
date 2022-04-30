@@ -10,12 +10,49 @@ export const Context = (props) => {
         login: ''
     });
 
+    const [cart, setCart] = useState([]);
+
+
+
+    const addCart = (product) => {
+        let idx = cart.findIndex(item => item.id === product.id && item.color === product.color && item.size === product.size);
+        if (idx >= 0) {
+            setCart(cart.map(item => {
+                if (item.id === product.id && item.color === product.color && item.size === product.size) {
+                    return {...item, count: +item.count + +product.count}
+                } else {
+                    return item
+                }
+            }))
+        } else {
+            setCart([...cart, product]);
+        }
+    };
+
+    const updateCart = (id, color, size, count) => {
+        setCart(cart.map(item => {
+            if (item.id === id && item.color === color && item.size === size) {
+                return {...item, count: count}
+            } else {
+                return item
+            }
+        }))
+    };
+
+    const deleteCart = (id, color, size) => {
+        setCart(cart.filter((item) => {
+            return item.id !== id || item.color !== color || item.size !== size
+        }))
+    };
+
+    const [ticket, setTicket] = useState([]);
+
+
     const [page, setPage] = useState(1);
 
     const [status, setStatus] = useState('all');
 
     const [product, setProduct] = useState({});
-
 
     const [shop, setShop] = useState([]);
 
@@ -44,12 +81,22 @@ export const Context = (props) => {
             setUser(JSON.parse(localStorage.getItem('user')))
         }
 
+
+        if (localStorage.getItem('cart') !== null) {
+            setCart(JSON.parse(localStorage.getItem('cart')))
+        }
+
         axios('http://localhost:8080/clothes')
             .then(({data}) => setShop(data) )
     }, []);
 
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }, [cart]);
+
     const logOutUser = () => {
         localStorage.removeItem('user');
+        localStorage.removeItem('cart');
         setUser({
             login: ''
         })
@@ -62,12 +109,19 @@ export const Context = (props) => {
         logOutUser,
         loginUser,
         shop,
+        cart,
+        setCart,
+        addCart,
+        deleteCart,
+        updateCart,
         page,
         setPage,
         setStatus,
         status,
         product,
-        setProduct
+        setProduct,
+        ticket,
+        setTicket
     };
 
 
