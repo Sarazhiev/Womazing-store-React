@@ -9,10 +9,11 @@
       "id": 1
     },
     {
+      "123325": "",
       "email": "nurik@mail.ru",
-      "password": "$2a$10$BYCLuKIZ8nlIYS.Ie4GSAuv1j.bHlqO6UWtqTbMzltbJp2Da/i0Vy",
+      "password": "$2a$10$yBlq3VFtOkPcZvBF9SEzm.Xp55WR/jnqfEV7CdHoMjOXRmOy9Z2GG",
       "login": "Nursultan",
-      "phone": "+996(500)00-00-00",
+      "phone": "+996(500)32-63-20",
       "orders": [
         {
           "clothes": [
@@ -47,7 +48,8 @@
           "date": "2022-04-30T11:18:57.567Z"
         }
       ],
-      "id": 2
+      "id": 2,
+      "confirmPwd": "1233255"
     },
     {
       "email": "Sabine@mail.ru",
@@ -56,6 +58,19 @@
       "phone": "+996(111)11-11-11",
       "orders": [],
       "id": 3
+    },
+    {
+      "email": "raha@mail.ru",
+      "password": "$2a$10$mI1HuGssy6uufc87C3LYnONhYFH1.1fZk8chYeoywOBrySanwNI6m",
+      "login": "Rahat",
+      "phone": "+996(700)43-76-67",
+      "orders": [],
+      "id": 4,
+      "data": {
+        "login": "Rahat444",
+        "phone": "+996(700)43-76-67",
+        "email": "raha@mail.ru"
+      }
     }
   ],
   "clothes": [

@@ -93,6 +93,7 @@
     transition: .5s;
   }
   &__card-link:hover::before {
+    z-index: 4;
     content: '→';
     position: absolute;
     top: 0;

@@ -3,7 +3,7 @@ import magicImg from "../../../Assets/Brands/magic.png";
 import {Link, NavLink} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import './magic.scss'
-
+import {LazyLoadImage} from 'react-lazy-load-image-component'
 const Magic = () => {
 
     const {t} = useTranslation();
@@ -18,7 +18,11 @@ const Magic = () => {
                         <p className="magic__text"  dangerouslySetInnerHTML={{__html: t("brands.magic.text")}}/>
                     </div>
                     <div className="magic__inner">
-                        <img src={magicImg} alt="image"/>
+                        <LazyLoadImage
+                            alt='image'
+                            src={magicImg}
+                            effect='blur'
+                        />
                     </div>
                 </div>
                 <div className="magic__go">

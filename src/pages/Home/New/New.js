@@ -3,6 +3,7 @@ import img from "../../../Assets/Home/home-new.png";
 import {BsArrowDown} from "react-icons/bs";
 import {useTranslation} from "react-i18next";
 import {Link} from "react-router-dom";
+import {LazyLoadImage} from 'react-lazy-load-image-component'
 
 const New = () => {
     const {t} = useTranslation();
@@ -21,7 +22,11 @@ const New = () => {
                         </Link>
                     </div>
                     <div className='new__content-right'>
-                        <img src={img} alt="woman"/>
+                        <LazyLoadImage
+                            alt='woman'
+                            src={img}
+                            effect='blur'
+                        />
                     </div>
                 </div>
             </div>

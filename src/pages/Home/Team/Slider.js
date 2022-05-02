@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import {LazyLoadImage} from 'react-lazy-load-image-component'
 
 
 import "swiper/css";
@@ -36,17 +37,32 @@ const Slider = () => {
             >
                 <SwiperSlide>
                     <div className="team__content-left">
-                    <img src={img} alt="img" className="team__content-img"/>
+                        <LazyLoadImage
+                            className="team__content-img"
+                            alt='img'
+                            src={img}
+                            effect='blur'
+                        />
                 </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="team__content-left">
-                        <img src={img2} alt="img" className="team__content-img"/>
+                        <LazyLoadImage
+                            className="team__content-img"
+                            alt='img'
+                            src={img2}
+                            effect='blur'
+                        />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="team__content-left">
-                        <img src={img3} alt="img" className="team__content-img"/>
+                        <LazyLoadImage
+                            className="team__content-img"
+                            alt='img'
+                            src={img3}
+                            effect='blur'
+                        />
                     </div>
                 </SwiperSlide>
 

@@ -4,6 +4,8 @@ import axios from "axios";
 import {useTranslation} from "react-i18next";
 import {CustomContext} from "../../Context";
 import SliderProduct from "./SliderProduct/SliderProduct";
+import {LazyLoadImage} from 'react-lazy-load-image-component'
+import magicImg from "../../Assets/Brands/magic.png";
 
 const Product = () => {
 
@@ -36,7 +38,11 @@ const Product = () => {
                         <p className="product__unlink">{product.title}</p>
                     </div>
                     <div className="product__content">
-                        <img src={`../${product.image}`} alt={product.title} className="product__content-img"/>
+                        <LazyLoadImage
+                            src={`../${product.image}`}
+                            effect='blur'
+                            className="product__content-img"
+                        />
                         <div className="product__content-info">
                             <p className='product__content-price'>${product.priceSale
                                 ? <>
@@ -49,7 +55,7 @@ const Product = () => {
                             <ul className='product__content-sizes'>
                                 {
                                     product.size.map(item => (
-                                        <li key={item.id} onClick={() => setSize(item)} className={`product__content-size ${item === size ? 'product__content-size_active' : ''} `}>{item}</li>
+                                        <li key={item} onClick={() => setSize(item)} className={`product__content-size ${item === size ? 'product__content-size_active' : ''} `}>{item}</li>
                                     ))
                                 }
                             </ul>
@@ -57,7 +63,7 @@ const Product = () => {
                             <ul className='product__content-sizes'>
                                 {
                                     product.colors.map(item => (
-                                        <li key={item.id} onClick={() => setColor(item)} style={{background: item, border: '1px solid grey', cursor: 'pointer'}} className={`product__content-color ${item === color ? 'product__content-color_active' : ''}`}/>
+                                        <li key={item} onClick={() => setColor(item)} style={{background: item, border: '1px solid grey', cursor: 'pointer'}} className={`product__content-color ${item === color ? 'product__content-color_active' : ''}`}/>
                                     ))
                                 }
                             </ul>

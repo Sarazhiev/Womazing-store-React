@@ -2,6 +2,10 @@ import React from 'react';
 import {useTranslation} from "react-i18next";
 import ideaImg from "../../../Assets/Brands/idea.png"
 import './idea.scss'
+import {LazyLoadImage} from 'react-lazy-load-image-component'
+
+
+
 const Idea = () => {
 
     const {t} = useTranslation();
@@ -11,7 +15,11 @@ const Idea = () => {
             <div className="container">
                 <div className="idea__content">
                     <div className="idea__inner">
-                        <img src={ideaImg} alt="image"/>
+                        <LazyLoadImage
+                            alt='image'
+                            src={ideaImg}
+                            effect='blur'
+                        />
                     </div>
 
                     <div className="idea__inner">

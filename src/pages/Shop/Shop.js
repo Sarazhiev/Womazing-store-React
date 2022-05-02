@@ -4,6 +4,7 @@ import {Link, NavLink} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import 'antd/dist/antd.css';
 import {Pagination} from 'antd';
+import {LazyLoadImage} from 'react-lazy-load-image-component'
 
 
 const Shop = () => {
@@ -93,7 +94,12 @@ const Shop = () => {
 
                                         <div key={item.id} className='shop__card'>
                                             <Link className="shop__card-link" to={`/product/${item.id}`}>
-                                                <img className='shop__card-img' src={`../${item.image}`} alt=""/>
+                                                <LazyLoadImage
+                                                    className='shop__card-img'
+                                                    alt='t-short'
+                                                    src={`../${item.image}`}
+                                                    effect='blur'
+                                                />
                                             </Link>
                                             <h3 className='shop__card-title'>{item.title}</h3>
                                             <p className='shop__card-price'>${item.priceSale

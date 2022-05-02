@@ -33,8 +33,9 @@ const SliderProduct = () => {
                     }).map(item => (
                         <SwiperSlide key={item.id}>
 
-                            <div key={item.id} className='product__card'>
+                            <div  className='product__card'>
                                 <Link className="shop__card-link" to={`/product/${item.id}`}>
+
                                     <img className='shop__card-img' src={`../${item.image}`} alt=""/>
                                 </Link>
                                 <h3 className='shop__card-title'>{item.title}</h3>
