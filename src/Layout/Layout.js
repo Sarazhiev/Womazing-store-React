@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Route, Routes, useLocation} from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Contact from "../pages/Contact/Contact";
@@ -14,9 +14,12 @@ import Profile from "../pages/Profile/Profile";
 import Product from "../pages/Product/Product";
 import Order from "../pages/Order/Order";
 import Checkout from "../pages/Checkout/Checkout";
+import AdminPanel from "../pages/AdminPanel/AdminPanel";
+import {CustomContext} from "../Context";
 
 const Layout = () => {
     const location = useLocation();
+    const {user} = useContext(CustomContext);
     return (
         <div>
 
@@ -37,10 +40,15 @@ const Layout = () => {
                 <Route path='/profile' element={<Profile/>}/>
                 <Route path='/order' element={<Order/>}/>
                 <Route path='/checkout' element={<Checkout/>}/>
+                {
+                    user.email === 'admin@mail.ru' ? <Route path='/admin' element={<AdminPanel/>}/> : ''
+                }
+
             </Routes>
             {
                    location.pathname === "/login"
                 || location.pathname === "/register"
+                || location.pathname === "/admin"
 
                 ? '' : <Footer/>
             }

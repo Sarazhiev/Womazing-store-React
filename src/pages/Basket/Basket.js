@@ -46,8 +46,8 @@ const Basket = () => {
                 </div>
                 {
                     cart.length ? cart.map((item, idx) => (
-                        <React.Fragment key={item.id}>
-                            <BasketCard cart={cart} item={item} key={idx}/>
+                        <React.Fragment key={idx}>
+                            <BasketCard cart={cart} item={item} />
                         </React.Fragment>
                     ))
                         : <p className='basket__info-message'>{t("basket.basketText")}</p>

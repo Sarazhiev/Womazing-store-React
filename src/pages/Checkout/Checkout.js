@@ -24,7 +24,9 @@ const Checkout = () => {
                 : cart.reduce((acc, rec) => acc + rec.count * rec.price, 0),
             userEmail: user.email,
             date: new Date()
-        }).then(() => console.log('Успешно добавлен'));
+        }).then(() =>  {
+            console.log('Успешно добавлен')
+        });
         await axios.patch(`http://localhost:8080/users/${user.id}`, {
             orders: [
                 ...user.orders,
@@ -34,23 +36,23 @@ const Checkout = () => {
                         ? cart.reduce((acc, rec) => acc + rec.count * rec.price, 0) - cart.reduce((acc, rec) => acc + rec.count * rec.price, 0) / 100 * ticket[0].discount
                         : cart.reduce((acc, rec) => acc + rec.count * rec.price, 0),
                     date: new Date()
-
                 }
             ]
         }).then(() => console.log('Успешно добавлен'));
 
         await axios(`http://localhost:8080/users/${user.id}`).then((res) => setUser(res.data));
 
-            await Array.isArray(ticket) && ticket.length && ticket[0].count > 1 ?
-                axios.patch(`http://localhost:8080/tickets/${ticket[0].id}`, {count: ticket[0].count - 1})
+        await Array.isArray(ticket) && ticket.length && ticket[0].count > 1 ?
+            axios.patch(`http://localhost:8080/tickets/${ticket[0].id}`, {count: ticket[0].count - 1})
                 .then(() => console.log('успешно использован'))
-                : ticket[0].count === 1 ? axios.delete(`http://localhost:8080/tickets/${ticket[0].id}`).then(() => console.log('Успешно удален'))
-                : console.log('Error')
+            : Array.isArray(ticket) && ticket.length && ticket[0].count === 1 ? axios.delete(`http://localhost:8080/tickets/${ticket[0].id}`).then(() => console.log('Успешно удален'))
+            : console.log('Error');
 
         await reset();
         await setCart([]);
         await setTicket([]);
         await navigate('/order')
+
 
     };
 
@@ -88,31 +90,31 @@ const Checkout = () => {
                                     </p>
                                 </li>
                                 {
-                                    cart.map((item) => (
-                                        <div key={item.id} className="checkout__buyer-cart">
+                                    cart.map((item, idx) => (
+                                        <div key={idx} className="checkout__buyer-cart">
                                             <img className='checkout__buyer-cart-img' src={item.image}
                                                  alt={item.title}/>
                                             <div className='checkout__buyer-cart-info'>
                                                 <div className='checkout__buyer-cart-top'>
                                                     <p className="checkout__buyer-product checkout__buyer-product-title">
-                                                        <span>Название :</span>
+                                                        <span>{t("checkout.name")} :</span>
                                                         {item.title}
                                                     </p>
                                                     <p className="checkout__buyer-product checkout__buyer-product-text">
-                                                        <span>Количество :</span>
+                                                        <span>{t("checkout.count")} :</span>
                                                         {item.count}</p>
                                                 </div>
                                                 <div className='checkout__buyer-cart-top'>
                                                     <p className="checkout__buyer-product checkout__buyer-product-text">
-                                                        <span>Цвет :</span>
+                                                        <span>{t("checkout.color")} :</span>
                                                         {item.color}
                                                     </p>
                                                     <p className="checkout__buyer-product checkout__buyer-product-text">
-                                                        <span>Размер :</span>
+                                                        <span>{t("checkout.size")} :</span>
                                                         {item.size}
                                                     </p>
                                                     <p className="checkout__buyer-product checkout__buyer-product-text">
-                                                        <span>Цена :</span>
+                                                        <span>{t("checkout.price")} :</span>
                                                         $ {item.count * item.price}
                                                     </p>
                                                 </div>

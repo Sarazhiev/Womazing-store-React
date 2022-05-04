@@ -125,6 +125,8 @@
       height: 47px;
       border: none;
       border-bottom: 1px solid #000000;
+      outline: none;
+      padding-left: 15px;
       &::placeholder {
         font-weight: 500;
         font-size: 17px;
@@ -144,8 +146,11 @@
       background: transparent;
       width: 248px;
       cursor: pointer;
-
       height: 68px;
+      &:hover {
+        background: #6E9C9F;
+        color: white;
+      }
     }
     &-message {
       position: absolute;

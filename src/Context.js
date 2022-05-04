@@ -81,7 +81,6 @@ export const Context = (props) => {
             setUser(JSON.parse(localStorage.getItem('user')))
         }
 
-
         if (localStorage.getItem('cart') !== null) {
             setCart(JSON.parse(localStorage.getItem('cart')))
         }

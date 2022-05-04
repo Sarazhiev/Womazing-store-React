@@ -29,7 +29,7 @@ const BasketCard = ({item}) => {
                     }} type="number"/>
                 </li>
 
-                <li className="basket__info-item">${product.inStock >= item.count ? +product.price * +item.count : 'Цена выше чем,количество вещей'}</li>
+                <li className="basket__info-item">${product.inStock >= item.count ? item.price * +item.count : item.price * item.count}</li>
             </ul>
         </div>
     );

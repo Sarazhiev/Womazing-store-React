@@ -122,7 +122,12 @@
     "comments": "Comments",
     "payment": "Payment Methods",
     "cash": "Cash payment",
-    "place": "Place an order"
+    "place": "Place an order",
+    "name": "Title",
+    "count": "Quantity",
+    "color": "color",
+    "size": "Size",
+    "price": "Price"
   },
   "shop": {
     "sortTitle": "Sort by:",
@@ -145,5 +150,23 @@
     "sweatshirt": "Sweatshirt",
     "tshort": "T-Short",
     "hoodies": "Hoodies"
+  },
+  "profile": {
+    "title": "My account",
+    "btn1": "Order history",
+    "btn2": "Settings",
+    "info": "Personal data",
+      "change": "Change",
+    "cancel": "Cancel",
+    "login": "Login",
+    "phone": "Phone number",
+    "mail": "Mail",
+    "save": "Save Changes",
+    "password": "Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm password",
+    "subscribe": "subscriptions",
+    "receive": "Receive offers and promotions",
+    "profile": "Profile"
   }
 }
