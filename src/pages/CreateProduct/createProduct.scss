@@ -1,0 +1,17 @@
+.create {
+  &__color {
+    position: relative;
+    &::before {
+      content: '+';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+    }
+  }
+  &__size {
+    background: black;
+    color: white;
+  }
+}

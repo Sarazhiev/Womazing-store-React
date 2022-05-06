@@ -126,7 +126,24 @@
       "password": "$2a$10$l.E/qnUszBA43ODP8oCimu8gmKhqz1bSVMqG4GqiVuGQq5nzRnejy",
       "login": "Admin",
       "phone": "+996(500)32-63-20",
-      "orders": [],
+      "orders": [
+        {
+          "clothes": [
+            {
+              "id": 2,
+              "title": "Hoody Harley Queen",
+              "image": "Shop/hoody2.jpg",
+              "color": "black",
+              "size": "s",
+              "count": "19",
+              "price": 300,
+              "category": "hoody"
+            }
+          ],
+          "price": 5415,
+          "date": "2022-05-05T11:49:03.647Z"
+        }
+      ],
       "id": 5
     }
   ],
@@ -443,7 +460,8 @@
         "brown",
         "black"
       ],
-      "inStock": 31
+      "inStock": 31,
+      "priceSale": 416
     },
     {
       "id": 18,
@@ -505,7 +523,7 @@
       "id": 1,
       "title": "itrun",
       "discount": 5,
-      "count": 6
+      "count": 5
     },
     {
       "id": 2,
@@ -628,6 +646,33 @@
       "userEmail": "nurik@mail.ru",
       "date": "2022-05-04T08:41:52.526Z",
       "id": 4
+    },
+    {
+      "name": "wqdqe",
+      "email": "weq@MAILRU",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street ": "",
+      "house": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "Hoody Harley Queen",
+          "image": "Shop/hoody2.jpg",
+          "color": "black",
+          "size": "s",
+          "count": "19",
+          "price": 300,
+          "category": "hoody"
+        }
+      ],
+      "price": 5415,
+      "userEmail": "admin@mail.ru",
+      "date": "2022-05-05T11:49:03.604Z",
+      "id": 5
     }
   ]
 }

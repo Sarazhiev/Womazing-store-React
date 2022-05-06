@@ -1,19 +1,21 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {Link, NavLink, useParams} from 'react-router-dom'
+import {Link, NavLink, useLocation, useParams} from 'react-router-dom'
 import axios from "axios";
 import {useTranslation} from "react-i18next";
 import {CustomContext} from "../../Context";
 import SliderProduct from "./SliderProduct/SliderProduct";
 import {LazyLoadImage} from 'react-lazy-load-image-component'
-import magicImg from "../../Assets/Brands/magic.png";
 
 const Product = () => {
 
     const params = useParams();
+    const location = useLocation();
     const [color, setColor] = useState('');
+    const [sale, setSale] = useState(false);
+    const [saleCount, setSaleCount] = useState(0);
     const [size, setSize] = useState('');
     const [count, setCount] = useState(1);
-    const {setPage, setStatus, shop, product, setProduct, addCart} = useContext(CustomContext);
+    const {setPage, setStatus, shop, product, setProduct, addCart, getAllClothes} = useContext(CustomContext);
     const {t} = useTranslation();
     useEffect(() => {
         axios(`http://localhost:8080/clothes/${params.id}`)
@@ -22,7 +24,7 @@ const Product = () => {
                 setColor(data.colors[0]);
                 setSize(data.size[0])
             })
-    }, [params]);
+    }, [location, shop]);
     return (
         <section className='product'>
             <div className="container">
@@ -44,6 +46,26 @@ const Product = () => {
                             className="product__content-img"
                         />
                         <div className="product__content-info">
+
+                            {
+                                !product.priceSale ?
+                                    <>
+                                        {sale ? <input value={saleCount} onChange={(e) => setSaleCount(e.target.value)} type="number"/> : ''}
+
+                                        <button type='button' onClick={() => {
+                                            if (sale) {
+                                                axios.patch(`http://localhost:8080/clothes/${product.id}`, {priceSale: product.price - product.price / 100 * saleCount})
+                                                    .then(() => {
+                                                        getAllClothes();
+                                                        setSaleCount(0)
+                                                    })
+                                            }
+                                            setSale(!sale);
+                                        }}>Добавить {sale ? '' : 'скидку'}</button>
+                                    </>
+                                    : ''
+                            }
+
                             <p className='product__content-price'>${product.priceSale
                                 ? <>
                                     <span style={{textDecoration: 'line-through'}}>{product.price}</span>

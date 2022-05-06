@@ -12,9 +12,7 @@ const Shop = () => {
 
     const [sort, setSort] = useState('');
 
-    const {shop} = useContext(CustomContext);
-    const {page, setPage} = useContext(CustomContext);
-    const {status, setStatus} = useContext(CustomContext);
+    const {page, setPage, shop, status, setStatus, user} = useContext(CustomContext);
 
     const showCount = shop.filter(item => status === 'all' ? item : item.category === status).filter(el => sort === 'discount' ? el.priceSale : el).filter((item, idx) => {
             return idx + 1 <= page * 9 && idx >= page * 9 - 9
@@ -58,21 +56,24 @@ const Shop = () => {
                     }} className={`shop__item ${status === "hoody" && 'shop__item_active'}`}>{t('shop.hoody')}
                     </li>
                 </ul>
-
-                <div className='shop__sort-type'>
-                    {sort
-                        ? <h3 className='shop__sort-title'>{t("shop.sortTitle")} <span>{sort}</span></h3>
-                        : ''
-                    }
-                    <div className='shop__sorts'>
-                        <button type='btn' className={`shop__sort ${sort === 'big' ? 'active' : ''}`}
-                                onClick={() => setSort('big' !== sort ? 'big' : '')}>{t("shop.big")}</button>
-                        <button type='btn' className={`shop__sort ${sort === 'less' ? 'active' : ''}`}
-                                onClick={() => setSort('less' !== sort ? 'less' : '')}>{t("shop.less")}</button>
-                        <button type='btn' className={`shop__sort ${sort === 'discount' ? 'active' : ''}`}
-                                onClick={() => setSort('discount' !== sort ? 'discount' : '')}>{t("shop.discount")}</button>
+                <div className='shop__sort-content'>
+                    {user.email === 'admin@mail.ru' ? <Link to='/create' className='shop__sort'>Add</Link> : <span/>}
+                    <div className='shop__sort-type'>
+                        {sort
+                            ? <h3 className='shop__sort-title'>{t("shop.sortTitle")} <span>{sort}</span></h3>
+                            : ''
+                        }
+                        <div className='shop__sorts'>
+                            <button type='btn' className={`shop__sort ${sort === 'big' ? 'active' : ''}`}
+                                    onClick={() => setSort('big' !== sort ? 'big' : '')}>{t("shop.big")}</button>
+                            <button type='btn' className={`shop__sort ${sort === 'less' ? 'active' : ''}`}
+                                    onClick={() => setSort('less' !== sort ? 'less' : '')}>{t("shop.less")}</button>
+                            <button type='btn' className={`shop__sort ${sort === 'discount' ? 'active' : ''}`}
+                                    onClick={() => setSort('discount' !== sort ? 'discount' : '')}>{t("shop.discount")}</button>
+                        </div>
                     </div>
                 </div>
+
 
                 {
                     showCountsLength <= 0

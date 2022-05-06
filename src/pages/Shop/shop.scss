@@ -55,6 +55,7 @@
       color: #9C9C9C;
     }
   }
+
   &__sort-type {
     display: flex;
     flex-direction: column;
@@ -76,13 +77,17 @@
     column-gap: 20px;
   }
   &__sort {
+    margin-bottom: 20px;
     cursor: pointer;
     border: 1px solid #6E9C9F;
     background: transparent;
     color: #6E9C9F;
     width: 100px;
     height: 40px;
-    &.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.active, &:hover{
       background: #6E9C9F;
       color: white;
     }
@@ -107,5 +112,10 @@
     align-items: center;
     justify-content: center;
     transition: .5s;
+  }
+  &__sort-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

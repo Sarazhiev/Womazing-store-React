@@ -56,6 +56,11 @@ export const Context = (props) => {
 
     const [shop, setShop] = useState([]);
 
+    const getAllClothes = () => {
+        axios('http://localhost:8080/clothes')
+            .then(({data}) => setShop(data) )
+    };
+
     const navigate = useNavigate();
 
     const registerUser = (data) => {
@@ -85,8 +90,7 @@ export const Context = (props) => {
             setCart(JSON.parse(localStorage.getItem('cart')))
         }
 
-        axios('http://localhost:8080/clothes')
-            .then(({data}) => setShop(data) )
+        getAllClothes()
     }, []);
 
     useEffect(() => {
@@ -120,7 +124,8 @@ export const Context = (props) => {
         product,
         setProduct,
         ticket,
-        setTicket
+        setTicket,
+        getAllClothes
     };
 
 

@@ -16,6 +16,7 @@ import Order from "../pages/Order/Order";
 import Checkout from "../pages/Checkout/Checkout";
 import AdminPanel from "../pages/AdminPanel/AdminPanel";
 import {CustomContext} from "../Context";
+import CreateProduct from "../pages/CreateProduct/CreateProduct";
 
 const Layout = () => {
     const location = useLocation();
@@ -40,6 +41,7 @@ const Layout = () => {
                 <Route path='/profile' element={<Profile/>}/>
                 <Route path='/order' element={<Order/>}/>
                 <Route path='/checkout' element={<Checkout/>}/>
+                <Route path='/create' element={<CreateProduct/>}/>
                 {
                     user.email === 'admin@mail.ru' ? <Route path='/admin' element={<AdminPanel/>}/> : ''
                 }
