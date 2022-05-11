@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useRef} from 'react';
 import {CustomContext} from "../../Context";
 import InputMask from 'react-input-mask';
 import {Link, useNavigate} from "react-router-dom";
@@ -15,11 +15,14 @@ const Register = () => {
         formState: {
             errors
         },
+        watch,
         reset
     } = useForm({
             mode: 'onBlur'
         }
     );
+    const password = useRef({});
+    password.current = watch("password", "");
 
 
 
@@ -46,11 +49,19 @@ const Register = () => {
                 <span>{errors?.phone?.message}</span>
                 <label className='register__label' htmlFor="4">Password</label>
                 <input id='4' {...register('password', {
-                    required: 'Это поле обязательное *'
+                    required: "You must specify a password",
+                    minLength: {
+                        value: 5,
+                        message: "Password must have at least 5 characters"
+                    }
                 })} className="register__input" type='password' placeholder='Введите пароль'/>
                 <span>{errors?.password?.message}</span>
                 <label className='register__label' htmlFor="5">Confirm Password</label>
-                <input id='5' className="register__input" type='password' placeholder='Введите пароль повторно'/>
+                <input id='5' className="register__input"  type='password' placeholder='Введите пароль повторно' {...register('confirmPwd', {
+                    validate: value =>
+                        value === password.current || "The password do not match"
+                })}/>
+                {errors?.confirmPwd && <p>{errors?.confirmPwd?.message}</p>}
                 <button className='register__btn'>Зарегестрироваться</button>
                 <p className='register__quest'>уже есть аккаунт? <Link className='register__link' to='/login'>Войти</Link> </p>
                 <Link to='/' className='home'>Вернуться на главную страницу</Link>

@@ -128,4 +128,48 @@
       column-gap: 13px;
     }
   }
+  &__orders {
+    &-list {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-image {
+      width: 100px;
+      height: 100px;
+    }
+    &-info {
+      font-weight: 900;
+      font-size: 17px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      align-items: center;
+  }
+    &-arrow {
+      cursor: pointer;
+    }
+    &-about {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: #A5A5A5;
+    }
+    &-span {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+    }
+  }
 }

@@ -17,6 +17,22 @@
     display: flex;
     column-gap: 74px;
 
+    &-btnSale {
+      background: #6E9C9F;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    &-inputSale {
+      width: 100px;
+      padding: 8px;
+      border: 1px solid #6E9C9F;
+      outline: none;
+      margin-right: 5px;
+    }
+
     &-img {
       width: 100%;
       max-width: 536px;

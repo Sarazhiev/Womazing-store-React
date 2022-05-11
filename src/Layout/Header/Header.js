@@ -30,7 +30,7 @@ const Header = () => {
                         <li className='header__item'><NavLink className='header__link' to="/brands">{t("header.link3")}</NavLink></li>
                         <li className='header__item'><NavLink className='header__link' to="/contact">{t("header.link4")}</NavLink></li>
                         {
-                            user.email === 'admin@mail.ru' ? <li className='header__item'><NavLink className='header__link' to="/admin">Admin Panel</NavLink></li> : ''
+                            user.email === 'admin@mail.ru' ? <li className='header__item'><NavLink className='header__link' to="/clothes">Admin Panel</NavLink></li> : ''
                         }
 
                     </ul>

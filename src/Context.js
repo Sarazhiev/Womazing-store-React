@@ -88,8 +88,8 @@ export const Context = (props) => {
 
         if (localStorage.getItem('cart') !== null) {
             setCart(JSON.parse(localStorage.getItem('cart')))
-        }
 
+        }
         getAllClothes()
     }, []);
 
@@ -97,12 +97,21 @@ export const Context = (props) => {
         localStorage.setItem('cart', JSON.stringify(cart))
     }, [cart]);
 
+    useEffect(() => {
+        localStorage.setItem('user', JSON.stringify(user));
+    }, [user.orders])
+
     const logOutUser = () => {
-        localStorage.removeItem('user');
-        localStorage.removeItem('cart');
-        setUser({
-            login: ''
-        })
+        if (window.confirm('ты точно хочешь выйти?')) {
+            localStorage.removeItem('user');
+            localStorage.removeItem('cart');
+            setUser({
+                login: ''
+            })
+        } else {
+            return ''
+        }
+
     };
 
     const value = {

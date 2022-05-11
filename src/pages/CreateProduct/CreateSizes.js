@@ -7,7 +7,7 @@ const CreateSizes = ({sizes, setSizes , size}) => {
             } else {
                 setSizes([...sizes, size])
             }
-        }} className={`product__content-size  ${sizes.includes(size) ? 'create__size' : ''  }`}>{size}</li>
+        }} className={`product__content-size create__form-size  ${sizes.includes(size) ? 'create__size' : ''  }`}>{size}</li>
     );
 };
 

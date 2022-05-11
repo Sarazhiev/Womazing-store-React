@@ -1,157 +1,46 @@
 {
   "users": [
     {
-      "email": "Nurik@mail.ru",
-      "password": "$2a$10$4w.Gs.OIfE9S6Pi1k4Ovku49trIvQwiKkZAqOiOoV4phOMpAxJwrO",
-      "login": "Nursultan",
-      "phone": "500326320",
-      "orders": [],
-      "id": 1
-    },
-    {
-      "123325": "",
-      "email": "nurik@mail.ru",
-      "password": "$2a$10$yBlq3VFtOkPcZvBF9SEzm.Xp55WR/jnqfEV7CdHoMjOXRmOy9Z2GG",
-      "login": "Nursultan",
+      "email": "admin@mail.ru",
+      "password": "$2a$10$vurQ6bvfgt3B.8O9V6F4h.9l7m1u.jlGNB6dDxQy0GF7hkZmIVUXm",
+      "login": "admin",
       "phone": "+996(500)32-63-20",
+      "confirmPwd": "admin",
       "orders": [
         {
+          "name": "",
+          "email": "Nurik@mail.ru",
+          "phone": "",
+          "country": "",
+          "city": "",
+          "street": "",
+          "house": "",
+          "flat": "",
+          "message": "",
           "clothes": [
             {
-              "id": 2,
-              "title": "Hoody Harley Queen",
-              "image": "Shop/hoody2.jpg",
-              "color": "green",
-              "size": "s",
-              "count": 2,
-              "price": 300,
-              "category": "hoody"
-            }
-          ],
-          "price": 570,
-          "date": "2022-04-30T11:18:01.578Z"
-        },
-        {
-          "clothes": [
-            {
-              "id": 2,
-              "title": "Hoody Harley Queen",
-              "image": "Shop/hoody2.jpg",
-              "color": "green",
+              "id": 1,
+              "title": "Hoody Chess",
+              "image": "Shop/hoody1.jpg",
+              "color": "orange",
               "size": "s",
               "count": 1,
-              "price": 300,
+              "price": 200,
               "category": "hoody"
             }
           ],
-          "price": 285,
-          "date": "2022-04-30T11:18:57.567Z"
-        },
-        {
-          "clothes": [
-            {
-              "id": 2,
-              "title": "Hoody Harley Queen",
-              "image": "Shop/hoody2.jpg",
-              "color": "green",
-              "size": "s",
-              "count": "20",
-              "price": 300,
-              "category": "hoody"
-            }
-          ],
-          "price": 5700,
-          "date": "2022-05-03T08:16:45.372Z"
-        },
-        {
-          "clothes": [
-            {
-              "id": 2,
-              "title": "Hoody Harley Queen",
-              "image": "Shop/hoody2.jpg",
-              "color": "black",
-              "size": "xl",
-              "count": 12,
-              "price": 300,
-              "category": "hoody"
-            }
-          ],
-          "price": 3600,
-          "date": "2022-05-03T08:17:43.749Z"
-        },
-        {
-          "clothes": [
-            {
-              "id": 3,
-              "title": "Hoody Anime",
-              "image": "Shop/hoody3.jpg",
-              "color": "green",
-              "size": "s",
-              "count": "10",
-              "price": 400,
-              "category": "hoody"
-            }
-          ],
-          "price": 4000,
-          "date": "2022-05-04T08:41:52.560Z"
+          "price": 200,
+          "date": "2022-05-11T11:49:50.432Z"
         }
       ],
-      "history": [],
-      "id": 2,
-      "confirmPwd": "1233255"
-    },
-    {
-      "email": "Sabine@mail.ru",
-      "password": "$2a$10$InX0S7UoBPoU.VFJNeqTm.SA6BLf5Bw0B/6TBwKfDkwSrGPeRZlj2",
-      "login": "SabineJon",
-      "phone": "+996(111)11-11-11",
-      "orders": [],
-      "id": 3
-    },
-    {
-      "email": "raha@mail.ru",
-      "password": "$2a$10$mI1HuGssy6uufc87C3LYnONhYFH1.1fZk8chYeoywOBrySanwNI6m",
-      "login": "Rahat",
-      "phone": "+996(700)43-76-67",
-      "orders": [],
-      "id": 4,
-      "data": {
-        "login": "Rahat444",
-        "phone": "+996(700)43-76-67",
-        "email": "raha@mail.ru"
-      }
-    },
-    {
-      "email": "admin@mail.ru",
-      "password": "$2a$10$l.E/qnUszBA43ODP8oCimu8gmKhqz1bSVMqG4GqiVuGQq5nzRnejy",
-      "login": "Admin",
-      "phone": "+996(500)32-63-20",
-      "orders": [
-        {
-          "clothes": [
-            {
-              "id": 2,
-              "title": "Hoody Harley Queen",
-              "image": "Shop/hoody2.jpg",
-              "color": "black",
-              "size": "s",
-              "count": "19",
-              "price": 300,
-              "category": "hoody"
-            }
-          ],
-          "price": 5415,
-          "date": "2022-05-05T11:49:03.647Z"
-        }
-      ],
-      "id": 5
+      "id": 1
     }
   ],
   "clothes": [
     {
       "id": 1,
       "title": "Hoody Chess",
-      "price": 390,
+      "price": 415,
       "priceSale": 200,
       "image": "Shop/hoody1.jpg",
       "category": "hoody",
@@ -159,13 +48,18 @@
         "s",
         "m",
         "l",
-        "xl"
+        "xl",
+        "xxl",
+        "xs"
       ],
       "colors": [
+        "orange",
         "green",
+        "blue",
+        "white",
         "black"
       ],
-      "inStock": 0
+      "inStock": 15
     },
     {
       "id": 2,
@@ -208,7 +102,7 @@
     {
       "id": 4,
       "title": "Hoody Wendy",
-      "price": 429,
+      "price": 0,
       "image": "Shop/hoody4.jpg",
       "category": "hoody",
       "size": [
@@ -221,7 +115,8 @@
         "black",
         "white"
       ],
-      "inStock": 25
+      "inStock": 25,
+      "priceSale": ""
     },
     {
       "id": 5,
@@ -478,7 +373,8 @@
         "black",
         "white"
       ],
-      "inStock": 20
+      "inStock": 20,
+      "priceSale": 350
     },
     {
       "id": 19,
@@ -529,25 +425,25 @@
       "id": 2,
       "title": "sabine",
       "discount": 15,
-      "count": 5
+      "count": 4
     },
     {
       "id": 3,
       "title": "rusik",
       "discount": 25,
-      "count": 99
+      "count": 97
     }
   ],
   "orders": [
     {
-      "name": "qwerty",
-      "email": "qwerty@mail.ru",
-      "phone": "123",
-      "county": "",
-      "city": "",
-      "street ": "",
-      "house": "",
-      "flat": "",
+      "name": "Nursultan",
+      "email": "nurik@mail.ru",
+      "phone": "+996(500)32-63-20",
+      "country": "kg",
+      "city": "bish",
+      "street": "lenina",
+      "house": "1",
+      "flat": "51",
       "message": "",
       "clothes": [
         {
@@ -556,104 +452,60 @@
           "image": "Shop/hoody2.jpg",
           "color": "green",
           "size": "s",
-          "count": 2,
+          "count": 4,
           "price": 300,
           "category": "hoody"
-        }
-      ],
-      "price": 450,
-      "userEmail": "nurik@mail.ru",
-      "date": "2022-05-04T08:02:06.151Z",
-      "id": 1
-    },
-    {
-      "name": "",
-      "email": "123@mail.ru",
-      "phone": "123",
-      "county": "",
-      "city": "",
-      "street ": "",
-      "house": "",
-      "flat": "",
-      "message": "",
-      "clothes": [
-        {
-          "id": 2,
-          "title": "Hoody Harley Queen",
-          "image": "Shop/hoody2.jpg",
-          "color": "green",
-          "size": "s",
-          "count": 2,
-          "price": 300,
-          "category": "hoody"
-        }
-      ],
-      "price": 600,
-      "userEmail": "nurik@mail.ru",
-      "date": "2022-05-04T08:39:39.245Z",
-      "id": 2
-    },
-    {
-      "name": "",
-      "email": "123@mail.ru",
-      "phone": "123",
-      "county": "",
-      "city": "",
-      "street ": "",
-      "house": "",
-      "flat": "",
-      "message": "",
-      "clothes": [
-        {
-          "id": 2,
-          "title": "Hoody Harley Queen",
-          "image": "Shop/hoody2.jpg",
-          "color": "green",
-          "size": "s",
-          "count": 2,
-          "price": 300,
-          "category": "hoody"
-        }
-      ],
-      "price": 600,
-      "userEmail": "nurik@mail.ru",
-      "date": "2022-05-04T08:39:56.906Z",
-      "id": 3
-    },
-    {
-      "name": "",
-      "email": "1213@mail.ru",
-      "phone": "",
-      "county": "",
-      "city": "",
-      "street ": "",
-      "house": "",
-      "flat": "",
-      "message": "",
-      "clothes": [
+        },
         {
           "id": 3,
           "title": "Hoody Anime",
           "image": "Shop/hoody3.jpg",
           "color": "green",
           "size": "s",
-          "count": "10",
+          "count": 2,
           "price": 400,
           "category": "hoody"
         }
       ],
-      "price": 4000,
-      "userEmail": "nurik@mail.ru",
-      "date": "2022-05-04T08:41:52.526Z",
-      "id": 4
+      "price": 2000,
+      "userEmail": "admin@mail.ru",
+      "date": "2022-05-11T11:23:23.798Z",
+      "id": 1
     },
     {
-      "name": "wqdqe",
-      "email": "weq@MAILRU",
+      "name": "ads",
+      "email": "sad@mail.ru",
+      "phone": "+996(123)13-21-32",
+      "country": "1232",
+      "city": "213",
+      "street": "231",
+      "house": "213",
+      "flat": "21",
+      "message": "",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "Hoody Harley Queen",
+          "image": "Shop/hoody2.jpg",
+          "color": "green",
+          "size": "s",
+          "count": 3,
+          "price": 300,
+          "category": "hoody"
+        }
+      ],
+      "price": 900,
+      "userEmail": "admin@mail.ru",
+      "date": "2022-05-11T11:32:20.565Z",
+      "id": 2
+    },
+    {
+      "name": "",
+      "email": "admin@mail.ru",
       "phone": "",
-      "county": "",
+      "country": "",
       "city": "",
-      "street ": "",
+      "street": "",
       "house": "",
       "flat": "",
       "message": "",
@@ -662,17 +514,44 @@
           "id": 2,
           "title": "Hoody Harley Queen",
           "image": "Shop/hoody2.jpg",
-          "color": "black",
+          "color": "green",
           "size": "s",
-          "count": "19",
+          "count": 1,
           "price": 300,
           "category": "hoody"
         }
       ],
-      "price": 5415,
+      "price": 300,
       "userEmail": "admin@mail.ru",
-      "date": "2022-05-05T11:49:03.604Z",
-      "id": 5
+      "date": "2022-05-11T11:42:21.765Z",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "Nurik@mail.ru",
+      "phone": "",
+      "country": "",
+      "city": "",
+      "street": "",
+      "house": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 1,
+          "title": "Hoody Chess",
+          "image": "Shop/hoody1.jpg",
+          "color": "orange",
+          "size": "s",
+          "count": 1,
+          "price": 200,
+          "category": "hoody"
+        }
+      ],
+      "price": 200,
+      "userEmail": "admin@mail.ru",
+      "date": "2022-05-11T11:49:50.384Z",
+      "id": 4
     }
   ]
 }

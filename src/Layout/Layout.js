@@ -29,6 +29,7 @@ const Layout = () => {
             }
 
             <Routes>
+                {user.email !== 'admin@mail.ru' ? <Route path='/' element={<Home/>}/> : ''}
                 <Route path='/' element={<Home/>}/>
                 <Route path='/contact' element={<Contact/>}/>
                 <Route path='/shop' element={<Shop/>}/>
@@ -36,16 +37,13 @@ const Layout = () => {
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/register' element={<Register/>}/>
                 <Route path='/basket' element={<Basket/>}/>
-                <Route path='/*' element={<NotFound/>}/>
                 <Route path='/product/:id' element={<Product/>}/>
                 <Route path='/profile' element={<Profile/>}/>
                 <Route path='/order' element={<Order/>}/>
                 <Route path='/checkout' element={<Checkout/>}/>
                 <Route path='/create' element={<CreateProduct/>}/>
-                {
-                    user.email === 'admin@mail.ru' ? <Route path='/admin' element={<AdminPanel/>}/> : ''
-                }
-
+                {user.email === 'admin@mail.ru' ? <Route path='/*' element={<AdminPanel/>}/> : ''}
+                <Route path='/*' element={<NotFound/>}/>
             </Routes>
             {
                    location.pathname === "/login"

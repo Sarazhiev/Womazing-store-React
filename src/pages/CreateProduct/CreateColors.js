@@ -8,7 +8,7 @@ const CreateColors = ({colors, setColors, color}) => {
             } else {
                 setColors([...colors, color])
             }
-        }} style={{background: color ,border: '1px solid grey', cursor: 'pointer'}}
+        }} style={{background: color, color: color === 'black' ? 'white' : '', border: '1px solid grey', cursor: 'pointer'}}
             className={`product__content-color ${colors.includes(color) ? 'create__color' : ''} `}/>
     );
 };

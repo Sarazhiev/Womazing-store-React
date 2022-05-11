@@ -1,8 +1,9 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Link, NavLink, useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import {CustomContext} from "../../Context";
 import {useForm} from "react-hook-form";
+import InputMask from 'react-input-mask';
 import axios from "axios";
 
 const Checkout = () => {
@@ -11,7 +12,8 @@ const Checkout = () => {
 
     const {t} = useTranslation();
 
-    const navigate = useNavigate();
+    const navigate = useNavigate()
+
 
     const {cart, ticket, user, setUser, setCart, setTicket} = useContext(CustomContext);
     const addOrder = async (data) => {
@@ -31,6 +33,8 @@ const Checkout = () => {
             orders: [
                 ...user.orders,
                 {
+                    ...data,
+                    ...data,
                     clothes: cart,
                     price: Array.isArray(ticket) && ticket.length
                         ? cart.reduce((acc, rec) => acc + rec.count * rec.price, 0) - cart.reduce((acc, rec) => acc + rec.count * rec.price, 0) / 100 * ticket[0].discount
@@ -74,7 +78,7 @@ const Checkout = () => {
                                    placeholder={t("checkout.buyerName")} type="text"/>
                             <input {...register('email')} className="checkout__buyer-input"
                                    placeholder={t("checkout.buyerMail")} type="email"/>
-                            <input {...register('phone')} className="checkout__buyer-input"
+                            <InputMask mask={`+\\9\\96(999)99-99-99`} {...register('phone')} className="checkout__buyer-input"
                                    placeholder={t("checkout.buyerPhone")} type="tel"/>
                         </div>
                         <div className="checkout__buyer-left">
@@ -146,11 +150,11 @@ const Checkout = () => {
                         <div className="checkout__address-form">
                             <h3 className="checkout__title"
                                 dangerouslySetInnerHTML={{__html: t("checkout.addressTitle")}}/>
-                            <input {...register('county')} className="checkout__address-input" type="text"
+                            <input {...register('country')} className="checkout__address-input" type="text"
                                    placeholder={t("checkout.country")}/>
                             <input {...register('city')} className="checkout__address-input" type="text"
                                    placeholder={t("checkout.city")}/>
-                            <input {...register('street ')} className="checkout__address-input" type="text"
+                            <input {...register('street')} className="checkout__address-input" type="text"
                                    placeholder={t("checkout.street")}/>
                             <input {...register('house')} className="checkout__address-input" type="text"
                                    placeholder={t("checkout.home")}/>
