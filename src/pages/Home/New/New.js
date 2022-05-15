@@ -26,6 +26,7 @@ const New = () => {
                             alt='woman'
                             src={img}
                             effect='blur'
+                            className='new__img'
                         />
                     </div>
                 </div>

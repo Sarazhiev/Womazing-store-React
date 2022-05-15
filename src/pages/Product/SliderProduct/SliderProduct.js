@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
+import './sliderProduct.scss'
 import "swiper/css/pagination";
 import {Navigation, Pagination, Mousewheel, Keyboard, Autoplay} from "swiper";
 import {Link} from "react-router-dom";

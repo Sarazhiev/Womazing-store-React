@@ -28,6 +28,14 @@ const Shop = () => {
                     <Link className="contactHeader__link" to='/'>{t("contacts.crumbs.link1")}</Link>
                     -
                     <NavLink className="contactHeader__link" to='/shop'>{t("contacts.crumbs.link2")}</NavLink>
+                    <select className='shop__select' onChange={(e)=> {setStatus(e.target.value); setPage(1)}}>
+                        <option className='shop__select-item' defaultValue='all' value="all">All</option>
+                        <option value="sportsuit">Sportsuit</option>
+                        <option value="sweatshirt">Sweatshirt</option>
+                        <option value="tshort">T-short</option>
+                        <option value="hoody">Hoody</option>
+                    </select>
+
                 </div>
                 <ul className='shop__list'>
                     <li onClick={() => {

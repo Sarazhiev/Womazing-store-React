@@ -58,3 +58,56 @@
     color: #FFFFFF;
   }
 }
+
+@media (max-width: 1024px) {
+  .new {
+    &__title {
+      font-size: 45px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .new {
+    &__img {
+      width: 100%;
+    }
+    &__title {
+      font-size: 33px;
+    }
+    &__subtitle {
+      font-size: 17px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .new {
+    &__title {
+      font-size: 23px;
+      padding-top: 30px;
+    }
+    &__subtitle {
+      font-size: 14px;
+    }
+    &__btn1{
+      width: 55px;
+      height: 60px;
+    }
+    &__btn2{
+      width: 180px;
+      height: 60px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .new {
+    padding: 25px 0 80px;
+    &__content {
+      &-right {
+        display: none;
+      }
+      &-left {
+        margin: 0 auto;
+      }
+    }
+  }
+}

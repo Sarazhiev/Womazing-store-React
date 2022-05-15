@@ -17,7 +17,6 @@ const Profile = () => {
     const {user, setUser} = useContext(CustomContext);
     const [isActive, setIsActive] = useState(false);
 
-    console.log(user)
     const {
         reset,
         register,
@@ -76,14 +75,14 @@ const Profile = () => {
                                     <div className='profile__orders' key={idx}>
                                         <ul className='profile__orders-list'>
                                             <li className='profile__orders-item'>
-                                                <p className='profile__orders-info'><span className='profile__orders-about'>Имя</span> {item.name}</p>
-                                                <p className='profile__orders-info'><span className='profile__orders-about'>Почта</span> {item.email}</p>
-                                                <p className='profile__orders-info'><span className='profile__orders-about'>Телефон</span> {item.phone}</p>
-                                                <p className='profile__orders-info'><span className='profile__orders-about'>Страна</span> {item.country}</p>
-                                                <p className='profile__orders-info'><span className='profile__orders-about'>Город</span> {item.city}</p>
-                                                <p className='profile__orders-info'><span className='profile__orders-about'>Улица</span> {item.street}</p>
-                                                <p className='profile__orders-info'><span className='profile__orders-about'>Дом</span> {item.house}</p>
-                                                <p className='profile__orders-info'><span className='profile__orders-about'>Квартира</span> {item.flat}</p>
+                                                <p className='profile__orders-info'><span className='profile__orders-about'>{t("profile.name")}</span> {item.name}</p>
+                                                <p className='profile__orders-info'><span className='profile__orders-about'>{t("profile.email")}</span> {item.email}</p>
+                                                <p className='profile__orders-info'><span className='profile__orders-about'>{t("profile.tel")}</span> {item.phone}</p>
+                                                <p className='profile__orders-info'><span className='profile__orders-about'>{t("profile.country")}</span> {item.country}</p>
+                                                <p className='profile__orders-info'><span className='profile__orders-about'>{t("profile.city")}</span> {item.city}</p>
+                                                <p className='profile__orders-info'><span className='profile__orders-about'>{t("profile.street")}</span> {item.street}</p>
+                                                <p className='profile__orders-info'><span className='profile__orders-about'>{t("profile.house")}</span> {item.house}</p>
+                                                <p className='profile__orders-info'><span className='profile__orders-about'>{t("profile.flat")}</span> {item.flat}</p>
                                                 <p className='profile__orders-arrow' onClick={() => setIsActive(!isActive)}>
                                                     {
                                                         isActive ? <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +101,7 @@ const Profile = () => {
                                             <ul className='profile__orders-list'>
                                                 {
                                                     item.clothes.map(el => (
-                                                        <li className='profile__orders-item' key={el.id}>
+                                                        <li className='profile__orders-item ' key={el.id}>
                                                             <img className='profile__orders-image' src={el.image} alt=""/>
                                                             <p className='profile__orders-info'>Название : <br/> <span className='profile__orders-span'>{el.title}</span> </p>
                                                             <p className='profile__orders-info'>Категория : <br/> <span className='profile__orders-span'>{el.category}</span> </p>

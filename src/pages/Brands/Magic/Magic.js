@@ -17,13 +17,12 @@ const Magic = () => {
                         <h3 className="magic__title"  dangerouslySetInnerHTML={{__html: t("brands.magic.title")}}/>
                         <p className="magic__text"  dangerouslySetInnerHTML={{__html: t("brands.magic.text")}}/>
                     </div>
-                    <div className="magic__inner">
                         <LazyLoadImage
                             alt='image'
                             src={magicImg}
                             effect='blur'
+                            className="magic__inner2"
                         />
-                    </div>
                 </div>
                 <div className="magic__go">
                     <Link to='/shop'><button type="button" className="magic__btn" dangerouslySetInnerHTML={{__html: t("brands.magic.btn")}}/>

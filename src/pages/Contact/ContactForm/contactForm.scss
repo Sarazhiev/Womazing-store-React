@@ -68,3 +68,12 @@
     color: #000000;
   }
 }
+@media (max-width: 576px) {
+  .form {
+    width: 100%;
+  }
+  .form__message {
+    padding-bottom: 50px;
+    width: 69%;
+  }
+}

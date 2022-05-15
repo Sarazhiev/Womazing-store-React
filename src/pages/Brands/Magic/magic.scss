@@ -39,3 +39,31 @@
     margin-top: 130px;
   }
 }
+
+@media (max-width: 992px) {
+  .magic {
+    &__inner {
+      width: 50%;
+    }
+    &__inner2 {
+      width: 100%;
+    }
+    &__btn {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .magic {
+    &__content {
+      row-gap: 20px;
+      flex-direction: column-reverse;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .magic__inner {
+    width: 100%;
+}
+}

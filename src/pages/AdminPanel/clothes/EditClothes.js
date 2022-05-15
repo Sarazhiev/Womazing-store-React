@@ -7,7 +7,6 @@ const EditClothes = (props) => {
         <Edit title={'Изменить вещь'} {...props}>
             <SimpleForm>
                 <TextInput disabled source="id" />
-                <TextInput disabled source="priceSale" />
                 <TextInput disabled source="image" />
                 <TextInput source="title" />
                 <NumberInput source="price" />

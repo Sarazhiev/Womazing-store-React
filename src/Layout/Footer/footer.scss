@@ -62,3 +62,33 @@
     }
   }
 }
+@media (max-width: 1024px) {
+  .footer {
+    padding: 50px 0 10px;
+  }
+}
+@media (max-width: 992px) {
+  .footer {
+    padding: 25px;
+    &__nav {
+      justify-content: space-around;
+    }
+    &__content {
+      justify-content: space-around;
+    }
+    &__content-right {
+      column-gap: 50%;
+    }
+    &__content-defense {
+      margin-top: 0;
+    }
+  }
+  .footer__content-right {
+    column-gap: 10%;
+  }
+}
+@media (max-width: 577px) {
+  .footer {
+    display: none;
+  }
+}

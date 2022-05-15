@@ -14,15 +14,13 @@ const Idea = () => {
         <section className="idea">
             <div className="container">
                 <div className="idea__content">
-                    <div className="idea__inner">
                         <LazyLoadImage
                             alt='image'
                             src={ideaImg}
                             effect='blur'
+                            className="idea__inner"
                         />
-                    </div>
-
-                    <div className="idea__inner">
+                    <div className="idea__inner2">
                         <h3 className="idea__title"  dangerouslySetInnerHTML={{__html: t("brands.idea.title")}}/>
                         <p className="idea__text"  dangerouslySetInnerHTML={{__html: t("brands.idea.text")}}/>
                     </div>

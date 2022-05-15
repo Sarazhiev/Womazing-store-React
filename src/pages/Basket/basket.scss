@@ -1,5 +1,5 @@
 .basket {
-  padding: 150px;
+  padding: 150px 0;
   &__crumbs {
     align-items: center;
     display: flex;
@@ -60,6 +60,8 @@
       letter-spacing: 0.02em;
       color: #000000;
       width: 120px;
+      display: flex;
+      align-items: center;
     }
   }
   &__product {
@@ -117,7 +119,7 @@
     &-left {
       display: flex;
       column-gap: 16px;
-      position: relative;
+      //position: relative;
     }
     &-input {
       margin-top: 20px;
@@ -153,8 +155,8 @@
       }
     }
     &-message {
-      position: absolute;
-      bottom: -100px;
+      //position: absolute;
+      //bottom: -100px;
       font-size: 22px;
     }
   }
@@ -212,6 +214,92 @@
       border: none;
       cursor: pointer;
     }
+  }
+}
+
+@media (max-width: 993px) {
+  .basket__product {
+    margin-top: 15px;
+    row-gap: 41px;
+    flex-direction: column;
+  }
+  .basket {
+    padding: 40px 0;
+  }
+  .basket__pay-btn1 {
+    width: 240px;
+    height: 50px;
+    font-size: 18px;
+  }
+  .basket__pay-btn2 {
+    width: 215px;
+    height: 50px;
+  }
+  .basket__info-item2 {
+    display: none!important;
+  }
+  .basket__info-item {
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    width: 92px;
+    display: flex;
+    align-items: center;
+  }
+  .basket__ticket {
+    margin-top: 47px;
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+    text-align: center;
+    justify-content: center;
+  }
+  .basket__ticket-left {
+    display: flex;
+    column-gap: 16px;
+  }
+  .basket__ticket-btn {
+    width: 130px;
+    height: 51px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .basket__ticket {
+    margin-top: 47px;
+    display: flex;
+    ///* flex-direction: column; */
+    ///* align-items: self-end;
+    /* text-align: center; */
+    /* justify-content: center; */
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 576px) {
+  .basket__ticket-input {
+    width: 150px;
+    padding-left: 10px;
+  }
+  .basket__pay-btn1 {
+    width: 147px;
+  }
+  .basket__pay {
+    margin: 40px auto 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: block;
+  }
+  .basket__info-list {
+    display: flex;
+    column-gap: 1px;
+    text-align: center;
+  }
+  .basket__info-item {
+    font-size: 15px;
+    width: 60px;
   }
 }
 

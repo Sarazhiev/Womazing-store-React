@@ -37,11 +37,11 @@ const Basket = () => {
                 <div className="basket__info">
                     <h3 className="basket__info-title">{t("basket.product")}</h3>
                     <ul className="basket__info-list">
-                        <li className="basket__info-item">{t("basket.size")}</li>
-                        <li className="basket__info-item">{t("basket.color")}</li>
-                        <li className="basket__info-item">{t("basket.price")}</li>
-                        <li className="basket__info-item">{t("basket.quantity")}</li>
-                        <li className="basket__info-item">{t("basket.total")}</li>
+                        <li className="basket__info-item basket__info-item2">{t("basket.size")}</li>
+                        <li className="basket__info-item basket__info-item2">{t("basket.color")}</li>
+                        <li className="basket__info-item basket__info-item2">{t("basket.price")}</li>
+                        <li className="basket__info-item basket__info-item2">{t("basket.quantity")}</li>
+                        <li className="basket__info-item basket__info-item2">{t("basket.total")}</li>
                     </ul>
                 </div>
                 {

@@ -23,3 +23,20 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .contacts {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .contacts__content {
+    column-gap: 30px;
+  }
+  .contacts__info-link {
+    font-weight: 500;
+    font-size: 14px;
+  }
+}

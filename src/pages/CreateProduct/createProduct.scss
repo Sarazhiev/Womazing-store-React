@@ -93,3 +93,24 @@
   }
 
 }
+
+
+@media (max-width: 567px) {
+
+  .create__form-block {
+    width: 287px;
+  }
+  .create__form-block input {
+    width: 50%;
+    height: 30px;
+    outline: none;
+  }
+  .create__form-size {
+    width: 36px;
+    height: 36px;
+    font-size: 11px;
+  }
+  .create__form-btn {
+    padding: 10px 0;
+  }
+}

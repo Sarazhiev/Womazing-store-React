@@ -8,6 +8,8 @@ import CreateClothes from "./clothes/CreateClothes";
 import PostListUsers from "./users/PostListUsers";
 import EditUsers from "./users/EditUsers";
 import CreateUsers from "./users/CreateUsers";
+import PostListOrders from "./orders/PostListOrders";
+import EditOrders from "./orders/EditOrders";
 
 const AdminPanel = () => {
     return (
@@ -15,6 +17,7 @@ const AdminPanel = () => {
             <Admin dataProvider={restProvider('http://localhost:3000')}>
                 <Resource create={CreateClothes} edit={EditClothes} name="clothes" list={PostListClothes}/>
                 <Resource create={CreateUsers} edit={EditUsers} name="users" list={PostListUsers}/>
+                <Resource edit={EditOrders}  name="orders" list={PostListOrders}/>
             </Admin>,
         </section>
     );

@@ -167,6 +167,14 @@
     "confirmPassword": "Confirm password",
     "subscribe": "subscriptions",
     "receive": "Receive offers and promotions",
-    "profile": "Profile"
+    "profile": "Profile",
+    "name": "Name",
+    "email": "Email",
+    "tel": "Phone",
+    "country": "Country",
+    "city": "City",
+    "street": "Street",
+    "house": "House",
+    "flat": "Flat"
   }
 }
