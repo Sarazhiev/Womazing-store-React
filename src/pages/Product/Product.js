@@ -10,12 +10,11 @@ const Product = () => {
 
     const params = useParams();
     const location = useLocation();
-    const [color, setColor] = useState('');
     const [sale, setSale] = useState(false);
     const [saleCount, setSaleCount] = useState(0);
     const [size, setSize] = useState('');
     const [count, setCount] = useState(1);
-    const {setPage, setStatus, shop, product, setProduct, addCart, getAllClothes} = useContext(CustomContext);
+    const {setPage, setStatus, shop, product, setProduct, addCart, getAllClothes, color, setColor} = useContext(CustomContext);
     const {t} = useTranslation();
     useEffect(() => {
         axios(`http://localhost:8080/clothes/${params.id}`)
@@ -41,9 +40,9 @@ const Product = () => {
                     </div>
                     <div className="product__content">
                         <LazyLoadImage
-                            src={`../${product.image}`}
+                            src={`../${product.image[color]}`}
                             effect='blur'
-                            className="product__content-img"
+                            className='product__content-img'
                         />
                         <div className="product__content-info">
 

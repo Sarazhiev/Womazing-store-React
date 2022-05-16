@@ -37,7 +37,7 @@ const SliderProduct = () => {
                             <div  className='product__card'>
                                 <Link className="shop__card-link" to={`/product/${item.id}`}>
 
-                                    <img className='shop__card-img' src={`../${item.image}`} alt=""/>
+                                    <img className='shop__card-img' src={`../${item.image.black}`} alt=""/>
                                 </Link>
                                 <h3 className='shop__card-title'>{item.title}</h3>
                                 <p className='shop__card-price'>${item.priceSale

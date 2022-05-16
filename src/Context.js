@@ -47,6 +47,7 @@ export const Context = (props) => {
 
     const [ticket, setTicket] = useState([]);
 
+    const [color, setColor] = useState("black");
 
     const [page, setPage] = useState(1);
 
@@ -99,7 +100,7 @@ export const Context = (props) => {
 
     useEffect(() => {
         localStorage.setItem('user', JSON.stringify(user));
-    }, [user.orders])
+    }, [user.orders]);
 
     const logOutUser = () => {
         if (window.confirm('ты точно хочешь выйти?')) {
@@ -134,7 +135,9 @@ export const Context = (props) => {
         setProduct,
         ticket,
         setTicket,
-        getAllClothes
+        getAllClothes,
+        color,
+        setColor
     };
 
 
