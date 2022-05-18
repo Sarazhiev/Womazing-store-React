@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {CustomContext} from "../../Context";
 import {FiPhoneCall} from "react-icons/fi";
+import {ImArrowUp} from "react-icons/im";
 import {BsHandbag} from "react-icons/bs";
 import {Link, NavLink} from "react-router-dom"
 import {useTranslation} from "react-i18next";
@@ -9,6 +10,8 @@ import {FaUser} from 'react-icons/fa'
 const Header = () => {
     const {t, i18n} = useTranslation();
     const [burger, setBurger] = useState(false);
+
+    const [y, setY] = useState(0);
 
     const {user, logOutUser, cart} = useContext(CustomContext);
 
@@ -22,10 +25,21 @@ const Header = () => {
         }
     };
 
+    const handleNavigation = (e) => {
+        const window = e.currentTarget;
+        if (200 < window.scrollY) {
+            setY(1)
+        } else {
+            setY(0)
+        }
+    };
 
-
+    useEffect(() => {
+        setY(window.scrollY);
+        window.addEventListener("scroll", (e) => handleNavigation(e));
+    }, []);
     return (
-        <div className='header'>
+        <div id='header' className='header'>
             <div className="container">
                 <nav className='header__nav'>
                     <p className='header__logo'>
@@ -80,6 +94,11 @@ const Header = () => {
             <div onClick={() => setBurger(false)} className={`overlay ${burger ? 'overlay_active' : ''}`}>
 
             </div>
+
+            <a href="#header" className={`goTop ${y ? 'goTop_active' : ''}`}>
+                <ImArrowUp/>
+            </a>
+
         </div>
     );
 };

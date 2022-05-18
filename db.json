@@ -6,7 +6,74 @@
       "login": "Admin",
       "phone": "+996(500)32-63-20",
       "confirmPwd": "admin",
-      "orders": [],
+      "orders": [
+        {
+          "name": "",
+          "email": "SAD@MAIL.RU",
+          "phone": "",
+          "country": "",
+          "city": "",
+          "street": "",
+          "house": "",
+          "flat": "",
+          "message": "",
+          "clothes": [
+            {
+              "id": 7,
+              "title": "Sport Suit STAMINA2",
+              "image": {
+                "black": "Shop/sportsuit2.jpg",
+                "white": "Shop/sportsuit2-white.jpg",
+                "red": "Shop/sportsuit2-red.jpg",
+                "pink": "Shop/sportsuit2-pink.jpg",
+                "grey": "Shop/sportsuit2-grey.jpg",
+                "beige": "Shop/sportsuit2-almond.jpg",
+                "blue": "Shop/sportsuit2-blue.jpg"
+              },
+              "color": "beige",
+              "size": "s",
+              "count": 2,
+              "price": 279,
+              "category": "sportsuit"
+            }
+          ],
+          "price": 558,
+          "date": "2022-05-16T12:27:07.632Z"
+        },
+        {
+          "name": "mona",
+          "email": "nurik@mail.ru",
+          "phone": "",
+          "country": "",
+          "city": "",
+          "street": "",
+          "house": "",
+          "flat": "",
+          "message": "",
+          "clothes": [
+            {
+              "id": 6,
+              "title": "Sport Suit STAMINA1",
+              "image": {
+                "black": "Shop/sportsuit1-black.jpg",
+                "white": "Shop/sportsuit1-white.jpg",
+                "red": "Shop/sportsuit1-red.jpg",
+                "pink": "Shop/sportsuit1-pink.jpg",
+                "grey": "Shop/sportsuit1-grey.jpg",
+                "beige": "Shop/sportsuit1-beige.jpg",
+                "blue": "Shop/sportsuit1.jpg"
+              },
+              "color": "beige",
+              "size": "s",
+              "count": 1,
+              "price": 279,
+              "category": "sportsuit"
+            }
+          ],
+          "price": 279,
+          "date": "2022-05-16T12:29:26.197Z"
+        }
+      ],
       "id": 1
     }
   ],
@@ -198,7 +265,7 @@
       "title": "Sport Suit Milk",
       "price": 229,
       "image": {
-        "black": "Shop/sportsuit3-blue.jpg",
+        "blue": "Shop/sportsuit3-blue.jpg",
         "white": "Shop/sportsuit3.jpg",
         "red": "Shop/sportsuit3-red.jpg",
         "pink": "Shop/sportsuit3-pink.jpg",
@@ -213,7 +280,7 @@
       ],
       "colors": [
         "beige",
-        "black",
+        "blue",
         "white",
         "red",
         "pink",
@@ -258,11 +325,11 @@
       "price": 290,
       "priceSale": 150,
       "image": {
+        "pink": "Shop/sportsuit5.jpg",
         "black": "Shop/sportsuit5-black.jpg",
         "blue": "Shop/sportsuit5-blue.jpg",
         "white": "Shop/sportsuit5-white.jpg",
         "red": "Shop/sportsuit5-red.jpg",
-        "pink": "Shop/sportsuit5.jpg",
         "grey": "Shop/sportsuit5-grey.jpg",
         "beige": "Shop/sportsuit5-beige.jpg"
       },
@@ -288,10 +355,10 @@
       "title": "Sweatshirt Jinx LOL",
       "price": 300,
       "image": {
-        "black":"Shop/sweatshirt5.jpg",
-        "white":"Shop/sweatshirt5-white.jpg",
-        "red":"Shop/sweatshirt5-red.jpg",
-        "grey":"Shop/sweatshirt5-grey.jpg"
+        "white": "Shop/sweatshirt5-white.jpg",
+        "red": "Shop/sweatshirt5-red.jpg",
+        "black": "Shop/sweatshirt5.jpg",
+        "grey": "Shop/sweatshirt5-grey.jpg"
       },
       "category": "sweatshirt",
       "size": [
@@ -406,9 +473,9 @@
       "title": "Sweatshirt Euphoria",
       "price": 200,
       "image": {
-        "black": "Shop/sweatshirt1.jpg",
         "white": "Shop/sweatshirt1-white.jpg",
         "red": "Shop/sweatshirt1-red.jpg",
+        "black": "Shop/sweatshirt1.jpg",
         "grey": "Shop/sweatshirt1-grey.jpg"
       },
       "category": "sweatshirt",
@@ -431,12 +498,12 @@
       "title": "Футболка Монализа",
       "price": 540,
       "image": {
+        "orange": "Shop/tshort1-orange.jpg",
         "black": "Shop/tshort1.jpg",
         "beige": "Shop/tshort1-beige.jpg",
         "blue": "Shop/tshort1-blue.jpg",
         "brown": "Shop/tshort1-brown.jpg",
         "grey": "Shop/tshort1-grey.jpg",
-        "orange": "Shop/tshort1-orange.jpg",
         "pink": "Shop/tshort1-pink.jpg",
         "red": "Shop/tshort1-red.jpg",
         "white": "Shop/tshort1-white.jpg"
@@ -465,10 +532,10 @@
       "title": "Футболка девочка",
       "price": 520,
       "image": {
-        "beige": "Shop/tshort2-beige.jpg",
-        "brown": "Shop/tshort2-brown.jpg",
-        "black": "Shop/tshort2-grey.jpg",
         "pink": "Shop/tshort2-pink.jpg",
+        "brown": "Shop/tshort2-brown.jpg",
+        "grey": "Shop/tshort2-grey.jpg",
+        "beige": "Shop/tshort2-beige.jpg",
         "red": "Shop/tshort2-red.jpg",
         "white": "Shop/tshort2.jpg"
       },
@@ -485,7 +552,7 @@
         "beige",
         "red",
         "white",
-        "black"
+        "grey"
       ],
       "inStock": 31,
       "priceSale": 416
@@ -495,8 +562,8 @@
       "title": "Футболка Japan",
       "price": 350,
       "image": {
-        "black": "Shop/tshort3-black.jpg",
         "beige": "Shop/tshort3-beige.jpg",
+        "black": "Shop/tshort3-black.jpg",
         "blue": "Shop/tshort3-blue.jpg",
         "brown": "Shop/tshort3-brown.jpg",
         "grey": "Shop/tshort3-grey.jpg",
@@ -531,7 +598,7 @@
       "price": 490,
       "image": {
         "beige": "Shop/tshort4-beige.jpg",
-        "black": "Shop/tshort4-blue.jpg",
+        "blue": "Shop/tshort4-blue.jpg",
         "brown": "Shop/tshort4.jpg",
         "grey": "Shop/tshort4-grey.jpg",
         "orange": "Shop/tshort4-orange.jpg",
@@ -549,7 +616,7 @@
         "brown",
         "beige",
         "orange",
-        "black",
+        "blue",
         "grey"
       ],
       "inStock": 19
@@ -559,7 +626,7 @@
       "title": "Футболка Киллуа",
       "price": 500,
       "image": {
-        "black": "Shop/tshort5.jpg",
+        "white": "Shop/tshort5.jpg",
         "beige": "Shop/tshort5-beige.jpg",
         "blue": "Shop/tshort5-blue.jpg",
         "brown": "Shop/tshort5-brown.jpg",
@@ -567,7 +634,7 @@
         "orange": "Shop/tshort5-orange.jpg",
         "pink": "Shop/tshort5-pink.jpg",
         "red": "Shop/tshort5-red.jpg",
-        "white": "Shop/tshort5.jpg"
+        "black": "Shop/tshort5.jpg"
       },
       "category": "tshort",
       "size": [
@@ -609,5 +676,76 @@
       "count": 97
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "name": "",
+      "email": "SAD@MAIL.RU",
+      "phone": "",
+      "country": "",
+      "city": "",
+      "street": "",
+      "house": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 7,
+          "title": "Sport Suit STAMINA2",
+          "image": {
+            "black": "Shop/sportsuit2.jpg",
+            "white": "Shop/sportsuit2-white.jpg",
+            "red": "Shop/sportsuit2-red.jpg",
+            "pink": "Shop/sportsuit2-pink.jpg",
+            "grey": "Shop/sportsuit2-grey.jpg",
+            "beige": "Shop/sportsuit2-almond.jpg",
+            "blue": "Shop/sportsuit2-blue.jpg"
+          },
+          "color": "beige",
+          "size": "s",
+          "count": 2,
+          "price": 279,
+          "category": "sportsuit"
+        }
+      ],
+      "price": 558,
+      "userEmail": "admin@mail.ru",
+      "date": "2022-05-16T12:27:07.550Z",
+      "id": 1
+    },
+    {
+      "name": "mona",
+      "email": "nurik@mail.ru",
+      "phone": "",
+      "country": "",
+      "city": "",
+      "street": "",
+      "house": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 6,
+          "title": "Sport Suit STAMINA1",
+          "image": {
+            "black": "Shop/sportsuit1-black.jpg",
+            "white": "Shop/sportsuit1-white.jpg",
+            "red": "Shop/sportsuit1-red.jpg",
+            "pink": "Shop/sportsuit1-pink.jpg",
+            "grey": "Shop/sportsuit1-grey.jpg",
+            "beige": "Shop/sportsuit1-beige.jpg",
+            "blue": "Shop/sportsuit1.jpg"
+          },
+          "color": "beige",
+          "size": "s",
+          "count": 1,
+          "price": 279,
+          "category": "sportsuit"
+        }
+      ],
+      "price": 279,
+      "userEmail": "admin@mail.ru",
+      "date": "2022-05-16T12:29:26.166Z",
+      "id": 2
+    }
+  ]
 }

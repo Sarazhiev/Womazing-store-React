@@ -147,6 +147,18 @@
     display: flex;
   }
 }
+.goTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #6E9C9F99;
+  color: #FFFFFF;
+  padding: 15px 20px;
+  display: none;
+  &_active {
+    display: block;
+  }
+}
 
 @media (max-width: 1024px) {
   .header {

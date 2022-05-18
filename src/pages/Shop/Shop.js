@@ -5,6 +5,8 @@ import {useTranslation} from "react-i18next";
 import 'antd/dist/antd.css';
 import {Pagination} from 'antd';
 import {LazyLoadImage} from 'react-lazy-load-image-component'
+import { motion, AnimatePresence } from "framer-motion"
+
 
 
 const Shop = () => {
@@ -88,48 +90,56 @@ const Shop = () => {
                         ? <p className='shop__discount-text'>{t("shop.discountText")}</p>
                         : <>
                             <p>Показано: {showCount} из {showCountsLength} товаров</p>
-                            <div className='shop__row'>
-                                {
-                                    shop.sort((a, b) => {
-                                        if (sort === 'big') {
-                                            return (b.priceSale || b.price) - (a.priceSale || a.price)
-                                        } else if (sort === 'less') {
-                                            return (a.priceSale || a.price) - (b.priceSale || b.price)
-                                        }
-                                    }).filter(el => sort === 'discount' ? el.priceSale : el)
-                                        .filter(item => status === 'all' ? item : item.category === status).filter((item, idx) => {
-                                        return idx + 1 <= page * 9 && idx >= page * 9 - 9
-                                    }).map((item) => (
-
-                                        <div key={item.id} className='shop__card'>
-                                            <Link className="shop__card-link" to={`/product/${item.id}`}>
-                                                <LazyLoadImage
-                                                    className='shop__card-img'
-                                                    alt='t-short'
-                                                    src={`../${item.image[color]}`}
-                                                    effect='blur'
-                                                />
-                                            </Link>
-                                            <h3 className='shop__card-title'>{item.title}</h3>
-                                            <p className='shop__card-price'>${item.priceSale
-                                                ? <>
-                                                    <span style={{textDecoration: 'line-through'}}>{item.price}</span>
-                                                    -
-                                                    <span className='shop__card-price-sale'>${item.priceSale}</span>
-                                                </>
-                                                : item.price}</p>
-                                            {
-                                                item.inStock ?
-                                                    <p className='shop__card-instock'>
-                                                        В наличии : <span>{item.inStock}</span>
-                                                    </p> :
-                                                    <p className='shop__card-instock'>
-                                                        Нет в наличии !
-                                                    </p>
+                            <div style={{minHeight: '800px'}} className='shop__row'>
+                                <AnimatePresence exitBeforeEnter onExitComplete presenceAffectsLayout >
+                                    {
+                                        shop.sort((a, b) => {
+                                            if (sort === 'big') {
+                                                return (b.priceSale || b.price) - (a.priceSale || a.price)
+                                            } else if (sort === 'less') {
+                                                return (a.priceSale || a.price) - (b.priceSale || b.price)
                                             }
-                                        </div>
-                                    ))
-                                }
+                                        }).filter(el => sort === 'discount' ? el.priceSale : el)
+                                            .filter(item => status === 'all' ? item : item.category === status).filter((item, idx) => {
+                                            return idx + 1 <= page * 9 && idx >= page * 9 - 9
+                                        }).map((item) => (
+
+                                            <motion.div
+                                                initial={{ opacity: 0 , y: 100, x: 100}}
+                                                animate={{ opacity: 1 ,y: 0 , x: 0}}
+                                                exit={{ opacity: 0, y: -100, x: 100 }}
+                                                transition={{ duration: 0.6 }}
+                                                key={item.id} className='shop__card'>
+                                                <Link className="shop__card-link" to={`/product/${item.id}`}>
+                                                    <LazyLoadImage
+                                                        className='shop__card-img'
+                                                        alt='t-short'
+                                                        src={`../${item.image[Object.keys(item.image)[0]]}`}
+                                                        effect='blur'
+                                                    />
+                                                </Link>
+                                                <h3 className='shop__card-title'>{item.title}</h3>
+                                                <p className='shop__card-price'>${item.priceSale
+                                                    ? <>
+                                                        <span style={{textDecoration: 'line-through'}}>{item.price}</span>
+                                                        -
+                                                        <span className='shop__card-price-sale'>${item.priceSale}</span>
+                                                    </>
+                                                    : item.price}</p>
+                                                {
+                                                    item.inStock ?
+                                                        <p className='shop__card-instock'>
+                                                            В наличии : <span>{item.inStock}</span>
+                                                        </p> :
+                                                        <p className='shop__card-instock'>
+                                                            Нет в наличии !
+                                                        </p>
+                                                }
+                                            </motion.div>
+                                        ))
+                                    }
+                                </AnimatePresence>
+
                             </div>
                             <p>Показано: {showCount} из {showCountsLength} товаров</p></>
                 }

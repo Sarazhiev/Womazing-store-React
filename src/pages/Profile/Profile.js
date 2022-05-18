@@ -15,7 +15,7 @@ const Profile = () => {
     const [passwordChange, setPasswordChange] = useState(false);
     const {t} = useTranslation();
     const {user, setUser} = useContext(CustomContext);
-    const [isActive, setIsActive] = useState(false);
+    const [isActive, setIsActive] = useState(null);
 
     const {
         reset,
@@ -83,9 +83,9 @@ const Profile = () => {
                                                 <p className='profile__orders-info'><span className='profile__orders-about'>{t("profile.street")}</span> {item.street}</p>
                                                 <p className='profile__orders-info'><span className='profile__orders-about'>{t("profile.house")}</span> {item.house}</p>
                                                 <p className='profile__orders-info'><span className='profile__orders-about'>{t("profile.flat")}</span> {item.flat}</p>
-                                                <p className='profile__orders-arrow' onClick={() => setIsActive(!isActive)}>
+                                                <p className='profile__orders-arrow' onClick={() => setIsActive(isActive == idx ? 0 : idx)}>
                                                     {
-                                                        isActive ? <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                       idx == isActive ? <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M16 8.64986C16 8.45805 15.9289 8.26605 15.7869 8.11962L8.5142 0.619697C8.23002 0.326638 7.76984 0.326638 7.48584 0.619697L0.213135 8.11962C-0.0710456 8.41268 -0.0710456 8.88724 0.213135 9.18011C0.497316 9.47298 0.957497 9.47317 1.2415 9.18011L8.00002 2.21043L14.7585 9.18011C15.0427 9.47317 15.5029 9.47317 15.7869 9.18011C15.9289 9.03367 16 8.84167 16 8.64986Z" fill="#FF7010"/>
                                                         </svg>
                                                             :
@@ -97,12 +97,12 @@ const Profile = () => {
                                             </li>
                                         </ul>
                                         {
-                                            isActive &&
+                                            idx == isActive &&
                                             <ul className='profile__orders-list'>
                                                 {
                                                     item.clothes.map(el => (
                                                         <li className='profile__orders-item ' key={el.id}>
-                                                            <img className='profile__orders-image' src={el.image} alt=""/>
+                                                            <img className='profile__orders-image' src={el.image[Object.keys(el.image)[0]]} alt=""/>
                                                             <p className='profile__orders-info'>Название : <br/> <span className='profile__orders-span'>{el.title}</span> </p>
                                                             <p className='profile__orders-info'>Категория : <br/> <span className='profile__orders-span'>{el.category}</span> </p>
                                                             <p className='profile__orders-info'>цвет : <br/> <span className='profile__orders-span'>{el.color}</span></p>
