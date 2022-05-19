@@ -2,8 +2,9 @@
   padding: 194px 0 130px;
   &__list {
     display: flex;
-    column-gap: 15px;
+    //column-gap: 15px;
     align-items: center;
+    justify-content: space-between;
   }
   &__discount-text {
     text-align: center;
@@ -19,7 +20,7 @@
     letter-spacing: 0.02em;
     color: #000000;
     cursor: pointer;
-    margin: 100px 0 22px;
+    margin: 40px 0 22px;
     transition: .3s;
     &:hover, &_active {
       background: black;
@@ -60,7 +61,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 20px;
   }
   &__sort-title {
     font-weight: 500;
@@ -130,6 +130,22 @@
     color: #FFFFFF;
   }
 }
+.shop__input-search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.shop__input-clothes {
+  width: 200px;
+  height: 40px;
+  padding-left: 15px;
+  border: 1px solid #6E9C9F;
+  outline: none;
+  &::placeholder {
+    color: #6E9C9F99;
+    font-size: 14px;
+  }
+}
 @media (max-width: 1200px) {
   .shop {
     padding: 112px 0 120px;
@@ -151,6 +167,9 @@
       display: block;
       margin-left: 50px;
     }
+  }
+  .shop__input-search {
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 767px) {

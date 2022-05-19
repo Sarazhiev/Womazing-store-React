@@ -3,7 +3,7 @@ import './adminPanel.scss'
 import { Admin, Resource } from 'react-admin';
 import restProvider from 'ra-data-simple-rest';
 import PostListClothes from "./clothes/PostListClothes";
-import EditClothes from "./clothes/EditClothes";
+    import EditClothes from "./clothes/EditClothes";
 import CreateClothes from "./clothes/CreateClothes";
 import PostListUsers from "./users/PostListUsers";
 import EditUsers from "./users/EditUsers";

@@ -57,8 +57,8 @@ export const Context = (props) => {
 
     const [shop, setShop] = useState([]);
 
-    const getAllClothes = () => {
-        axios('http://localhost:8080/clothes')
+    const getAllClothes = (title = '') => {
+        axios(`http://localhost:8080/clothes?title_like=${title}`)
             .then(({data}) => setShop(data) )
     };
 

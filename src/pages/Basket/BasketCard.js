@@ -13,7 +13,7 @@ const BasketCard = ({item}) => {
             <div className='basket__product-left'>
                 <p className='basket__product-mark' onClick={() => deleteCart(item.id, item.color, item.size)}><ImCross/></p>
                 <Link className='shop__card-link' to={`/product/${item.id}`}>
-                    <img className='basket__product-img' src={item.image} alt={item.title}/>
+                    <img className='basket__product-img' src={item.image[item.color]} alt={item.title}/>
                 </Link>
                 <p className='basket__product-name'>{item.title}</p>
             </div>

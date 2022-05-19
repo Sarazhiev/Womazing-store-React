@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import {CustomContext} from "../../Context";
 import {Link, NavLink} from "react-router-dom";
 import {useTranslation} from "react-i18next";
@@ -13,14 +13,23 @@ const Shop = () => {
     const {t} = useTranslation();
 
     const [sort, setSort] = useState('');
+    const [search, setSearch] = useState('');
 
-    const {page, setPage, shop, status, setStatus, user, color, setColor} = useContext(CustomContext);
+
+    const {page, setPage, shop, status, setStatus, user, color, setColor, getAllClothes} = useContext(CustomContext);
 
     const showCount = shop.filter(item => status === 'all' ? item : item.category === status).filter(el => sort === 'discount' ? el.priceSale : el).filter((item, idx) => {
             return idx + 1 <= page * 9 && idx >= page * 9 - 9
         }).length,
         showCountsLength = shop.filter(item => status === 'all' ? item : item.category === status).filter(el => sort === 'discount' ? el.priceSale : el).length;
 
+    useEffect(() => {
+        if (search !== '') {
+            getAllClothes(search)
+        } else {
+            getAllClothes()
+        }
+    }, [search]);
 
     return (
         <section className='shop'>
@@ -30,14 +39,16 @@ const Shop = () => {
                     <Link className="contactHeader__link" to='/'>{t("contacts.crumbs.link1")}</Link>
                     -
                     <NavLink className="contactHeader__link" to='/shop'>{t("contacts.crumbs.link2")}</NavLink>
-                    <select className='shop__select' onChange={(e)=> {setStatus(e.target.value); setPage(1)}}>
-                        <option className='shop__select-item' defaultValue='all' value="all">All</option>
-                        <option value="sportsuit">Sportsuit</option>
-                        <option value="sweatshirt">Sweatshirt</option>
-                        <option value="tshort">T-short</option>
-                        <option value="hoody">Hoody</option>
-                    </select>
-
+                </div>
+                <select className='shop__select' onChange={(e)=> {setStatus(e.target.value); setPage(1)}}>
+                    <option className='shop__select-item' defaultValue='all' value="all">All</option>
+                    <option value="sportsuit">Sportsuit</option>
+                    <option value="sweatshirt">Sweatshirt</option>
+                    <option value="tshort">T-short</option>
+                    <option value="hoody">Hoody</option>
+                </select>
+                <div className='shop__input-search'>
+                    <input className='shop__input-clothes' placeholder='Search clothes...' type="search" onChange={(e) => setSearch(e.target.value)}/>
                 </div>
                 <ul className='shop__list'>
                     <li onClick={() => {
